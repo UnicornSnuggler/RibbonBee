@@ -1,0 +1,26 @@
+require('dotenv').config()
+const { Routes, REST } = require('discord.js');
+const fs = require('fs');
+
+const globalCommands = [];
+const globalCommandFiles = fs.readdirSync('./global_commands').filter(file => file.endsWith('.js'));
+
+for (const globalCommandFile of globalCommandFiles) {
+	const globalCommand = require(`./global_commands/${globalCommandFile}`);
+	globalCommands.push(globalCommand.data.toJSON());
+}
+
+const rest = new REST({ version: '9' }).setToken(process.env.discordToken);
+
+(async () => {
+    try {
+        console.log('Started reloading application global commands...');
+
+        await rest.put(Routes.applicationCommands(process.env.clientId), { body: globalCommands });
+
+        console.log('Successfully reloaded application global commands!');
+    }
+    catch (error) {
+        console.error(error);
+    }
+})();

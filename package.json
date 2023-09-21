@@ -1,0 +1,26 @@
+{
+  "name": "rotom",
+  "version": "1.0.0",
+  "description": "A querying utility designed to help Pokémon fans seek out new candidates for Ribbon Mastery challenges.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UnicornSnuggler/Rotom.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UnicornSnuggler/Rotom/issues"
+  },
+  "homepage": "https://github.com/UnicornSnuggler/Rotom#readme",
+  "dependencies": {
+    "axios": "^1.5.0",
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1",
+    "fs": "^0.0.1-security",
+    "mongodb": "^6.1.0"
+  }
+}
