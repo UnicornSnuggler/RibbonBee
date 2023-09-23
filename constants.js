@@ -6,6 +6,7 @@ exports.SECOND_MILLIS = 1000;
 
 exports.AFFIRMATIVE_EMOJI = ':white_check_mark:';
 exports.NEGATIVE_EMOJI = ':no_entry:';
+exports.WARNING_EMOJI = ':warning:';
 
 exports.ERROR = 'An unexpected error has occurred... The issue is being investigated!';
 
