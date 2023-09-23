@@ -1,9 +1,10 @@
 const { EmbedBuilder } = require('discord.js');
 
-const { BULBAPEDIA_SUFFIX, BULBAPEDIA_URI, SPRITE_FILE_EXTENSION, SPRITE_URI, AFFIRMATIVE_EMOJI, NEGATIVE_EMOJI, COLORS, FOOTER, FAVICON_URI, WARNING_EMOJI } = require('../constants');
+const { BULBAPEDIA_SUFFIX, BULBAPEDIA_URI, SPRITE_FILE_EXTENSION, SPRITE_URI, AFFIRMATIVE_EMOJI, NEGATIVE_EMOJI, COLORS, FOOTER, FAVICON_URI, WARNING_EMOJI, WARNINGS, PADLOCK_LOCKED_EMOJI, PADLOCK_UNLOCKED_EMOJI } = require('../constants');
 const { POKEMON } = require('../data/pokemon');
 const { COMMON_FORMS } = require('../data/misc');
 const { GetLatestGen, GetGenById, GetGamesByGen } = require('./gameHelper');
+const { SuperscriptNumber } = require('./stringHelper');
 
 const BuildBulbapediaUri = exports.BuildBulbapediaUri = function(name) {
     return `${BULBAPEDIA_URI}${name}${BULBAPEDIA_SUFFIX}`;
@@ -27,8 +28,9 @@ exports.CreatePokemonEmbed = function(key, pokemonData) {
     embed.setFooter({ text: FOOTER, iconURL: FAVICON_URI });
 
     let fields = [];
+    let warnings = [];
 
-    fields.push(CreatePokemonField(pokemonData));
+    fields.push(CreatePokemonField(pokemonData, warnings));
 
     if (pokemonData.evolvesFrom) {
         let prevolutionData = GetPokemonData(pokemonData.evolvesFrom);
@@ -42,38 +44,53 @@ exports.CreatePokemonEmbed = function(key, pokemonData) {
 
     while (fields.length) embed.addFields(fields.pop());
 
+    if (warnings.length) {
+        let warningsText = [];
+
+        for (let index = 0; index < warnings.length; index++) {
+            // warningsText.push(`${WARNING_EMOJI}${SuperscriptNumber(index + 1)} ${warnings[index]}`);
+            warningsText.push(`${WARNING_EMOJI} ${warnings[index]}`);
+        }
+
+        embed.addFields({ name: '**Warnings**', value: warningsText.join('\n') });
+    }
+
     return embed;
 }
 
-const CreatePokemonField = function(pokemonData) {
+const CreatePokemonField = function(pokemonData, warnings) {
     let description = [];
 
     let earliestGen = FindEarliestGen(pokemonData);
 
     description.push(`Generation ${earliestGen}`);
 
+    description.push(`\n${pokemonData.flags?.includes('restricted') ? `${PADLOCK_LOCKED_EMOJI} Restricted` : `${PADLOCK_UNLOCKED_EMOJI} Unrestricted`}`);
+
     let shadows = [];
 
     if (pokemonData.flags?.includes('colShadow') && pokemonData.games.includes('colosseum')) shadows.push('Col');
     if (pokemonData.flags?.includes('xdShadow') && pokemonData.games.includes('xd')) shadows.push('XD');
 
-    description.push(`\n${shadows.length ? AFFIRMATIVE_EMOJI : NEGATIVE_EMOJI} Shadow${shadows.length ? ` *(${shadows.join(', ')})*` : ''}\n`);
+    let shadowText = `${shadows.length ? AFFIRMATIVE_EMOJI : NEGATIVE_EMOJI} Shadow`;
+
+    if (shadows.length) {
+        shadowText += ` *(${shadows.join(', ')})*`;
+
+        if (pokemonData.flags?.includes('overFifty')) {
+            warnings.push(`${GetNameWithForm(pokemonData)}${WARNINGS['overFifty']}`);
+
+            // shadowText += ` ${WARNING_EMOJI}${SuperscriptNumber(warnings.length)}`;
+            shadowText += ` ${WARNING_EMOJI}`;
+        }
+    }
+
+    description.push(`${shadowText}\n`);
 
     description.push(`${pokemonData.games.includes('sh') || pokemonData.games.includes('sw') ? AFFIRMATIVE_EMOJI : NEGATIVE_EMOJI} Galar`);
     description.push(`${pokemonData.games.includes('bd') || pokemonData.games.includes('sp') ? AFFIRMATIVE_EMOJI : NEGATIVE_EMOJI} Sinnoh`);
     description.push(`${pokemonData.games.includes('pla') ? AFFIRMATIVE_EMOJI : NEGATIVE_EMOJI} Hisui`);
     description.push(`${pokemonData.games.includes('scar') || pokemonData.games.includes('vio') ? AFFIRMATIVE_EMOJI : NEGATIVE_EMOJI} Paldea`);
-
-    let warnings = [];
-
-    if (pokemonData.flags?.includes('restricted')) warnings.push('Restricted');
-    if (pokemonData.flags?.includes('overFifty')) warnings.push('Over level 50');
-
-    if (warnings.length) {
-        description.push(`\n**Warnings**`);
-        
-        for (let warning of warnings) description.push(`${WARNING_EMOJI} ${warning}`);
-    }
 
     description.push('~~     ~~');
 
@@ -130,10 +147,10 @@ const GetPokemonData = exports.GetPokemonData = function(name) {
     return pokemonData;
 };
 
-exports.SearchByName = function(query) {
-    let forms = []; 
+// exports.SearchByName = function(query) {
+//     let forms = []; 
     
-    Object.keys(COMMON_FORMS).forEach(key => forms.push(COMMON_FORMS[key].eng.replaceAll(' Form', '')));
+//     Object.keys(COMMON_FORMS).forEach(key => forms.push(COMMON_FORMS[key].eng.replaceAll(' Form', '')));
 
-
-}
+    
+// }
