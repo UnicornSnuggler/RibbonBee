@@ -121,7 +121,7 @@ const FindEarliestGen = exports.FindEarliestGeneration = function(pokemonData) {
 const GetNameWithForm = function(pokemonData) {
     let result = '';
 
-    if (pokemonData.forms) result += `${pokemonData.forms.eng.replaceAll(' Form', '')} `;
+    if (pokemonData.forms) result += `${pokemonData.forms.eng.replaceAll(/ form(?!e)/gi, '')} `;
 
     result += pokemonData.names.eng;
 
