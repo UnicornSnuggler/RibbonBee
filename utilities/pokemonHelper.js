@@ -19,6 +19,8 @@ const ConvertNameToKey = exports.ConvertNameToKey = function(name) {
 
 exports.CreatePokemonEmbed = function(key, pokemonData) {
     let embed = new EmbedBuilder();
+
+    if ('data-source' in pokemonData) pokemonData = GetPokemonData(pokemonData['data-source']);
     
     embed.setColor(COLORS.Default);
     embed.setTitle(pokemonData.names.eng);
