@@ -2,8 +2,8 @@ const { EmbedBuilder } = require('discord.js');
 
 const { BULBAPEDIA_SUFFIX, BULBAPEDIA_URI, SPRITE_FILE_EXTENSION, SPRITE_URI, AFFIRMATIVE_EMOJI, NEGATIVE_EMOJI, COLORS, FOOTER, FAVICON_URI, WARNING_EMOJI } = require('../constants');
 const { POKEMON } = require('../data/pokemon');
-const { GAMES, COMMON_FORMS } = require('../data/misc');
-const { GetLatestGen, GetGenById, GetGamesByGen, GetNameById } = require('./gameHelper');
+const { COMMON_FORMS } = require('../data/misc');
+const { GetLatestGen, GetGenById, GetGamesByGen } = require('./gameHelper');
 
 const BuildBulbapediaUri = exports.BuildBulbapediaUri = function(name) {
     return `${BULBAPEDIA_URI}${name}${BULBAPEDIA_SUFFIX}`;
@@ -57,9 +57,10 @@ const CreatePokemonField = function(pokemonData) {
     if (pokemonData.flags?.includes('colShadow') && pokemonData.games.includes('colosseum')) shadows.push('Col');
     if (pokemonData.flags?.includes('xdShadow') && pokemonData.games.includes('xd')) shadows.push('XD');
 
-    description.push(`\n${shadows.length ? AFFIRMATIVE_EMOJI : NEGATIVE_EMOJI} Shadow${shadows.length ? ` *(${shadows.join(', ')})*` : ''}`);
+    description.push(`\n${shadows.length ? AFFIRMATIVE_EMOJI : NEGATIVE_EMOJI} Shadow${shadows.length ? ` *(${shadows.join(', ')})*` : ''}\n`);
 
-    description.push(`\n${pokemonData.games.includes('sh') || pokemonData.games.includes('sw') ? AFFIRMATIVE_EMOJI : NEGATIVE_EMOJI} Galar`);
+    description.push(`${pokemonData.games.includes('sh') || pokemonData.games.includes('sw') ? AFFIRMATIVE_EMOJI : NEGATIVE_EMOJI} Galar`);
+    description.push(`${pokemonData.games.includes('bd') || pokemonData.games.includes('sp') ? AFFIRMATIVE_EMOJI : NEGATIVE_EMOJI} Sinnoh`);
     description.push(`${pokemonData.games.includes('pla') ? AFFIRMATIVE_EMOJI : NEGATIVE_EMOJI} Hisui`);
     description.push(`${pokemonData.games.includes('scar') || pokemonData.games.includes('vio') ? AFFIRMATIVE_EMOJI : NEGATIVE_EMOJI} Paldea`);
 
