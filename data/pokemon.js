@@ -12,7 +12,7 @@ exports.POKEMON = {
       chs: "暴雪王",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 460,
     games: [
       "diamond",
@@ -309,7 +309,7 @@ exports.POKEMON = {
       chs: "长尾怪手",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 190,
     games: [
       "gold",
@@ -360,7 +360,7 @@ exports.POKEMON = {
       chs: "胡地",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 65,
     games: [
       "red-eng",
@@ -532,7 +532,7 @@ exports.POKEMON = {
       chs: "双尾怪手",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 424,
     games: [
       "diamond",
@@ -655,7 +655,7 @@ exports.POKEMON = {
       cht: "太古羽蟲",
       chs: "太古羽虫",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "both",
     natdex: 347,
     games: [
@@ -875,7 +875,7 @@ exports.POKEMON = {
       chs: "阿尔宙斯",
     },
     gender: "unknown",
-    mythical: True,
+    mythical: true,
     natdex: 493,
     games: [
       "diamond",
@@ -1551,7 +1551,7 @@ exports.POKEMON = {
       cht: "天秤偶",
       chs: "天秤偶",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "unknown",
     natdex: 343,
     games: [
@@ -1728,7 +1728,7 @@ exports.POKEMON = {
       chs: "幽尾玄鱼",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 902,
     games: ["pla", "scar", "vio"],
     evolvesFrom: "basculin-white-striped",
@@ -1939,7 +1939,7 @@ exports.POKEMON = {
       chs: "狩猎凤蝶",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 267,
     games: [
       "ruby",
@@ -2072,7 +2072,7 @@ exports.POKEMON = {
       cht: "鐵啞鈴",
       chs: "铁哑铃",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "unknown",
     natdex: 374,
     games: [
@@ -2273,7 +2273,7 @@ exports.POKEMON = {
       chs: "大尾狸",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 400,
     games: [
       "diamond",
@@ -2312,7 +2312,7 @@ exports.POKEMON = {
       chs: "大牙狸",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 399,
     games: [
       "diamond",
@@ -2473,7 +2473,7 @@ exports.POKEMON = {
       chs: "火焰鸡",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 257,
     games: [
       "ruby",
@@ -2884,7 +2884,7 @@ exports.POKEMON = {
       cht: "青銅鐘",
       chs: "青铜钟",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "unknown",
     natdex: 437,
     games: [
@@ -2927,7 +2927,7 @@ exports.POKEMON = {
       cht: "銅鏡怪",
       chs: "铜镜怪",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "unknown",
     natdex: 436,
     games: [
@@ -3025,7 +3025,7 @@ exports.POKEMON = {
       chs: "泳圈鼬",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 418,
     games: [
       "diamond",
@@ -3252,7 +3252,7 @@ exports.POKEMON = {
       chs: "巴大蝶",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 12,
     games: [
       "red-eng",
@@ -3372,7 +3372,7 @@ exports.POKEMON = {
       chs: "梦歌仙人掌",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 332,
     games: [
       "ruby",
@@ -3436,7 +3436,7 @@ exports.POKEMON = {
       chs: "喷火驼",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 323,
     games: [
       "ruby",
@@ -3643,7 +3643,7 @@ exports.POKEMON = {
       cht: "盾甲繭",
       chs: "盾甲茧",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "both",
     natdex: 268,
     games: [
@@ -3789,7 +3789,7 @@ exports.POKEMON = {
       chs: "时拉比",
     },
     gender: "unknown",
-    mythical: True,
+    mythical: true,
     natdex: 251,
     games: [
       "gold",
@@ -4716,7 +4716,7 @@ exports.POKEMON = {
       cht: "念力土偶",
       chs: "念力土偶",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "unknown",
     natdex: 344,
     games: [
@@ -5090,7 +5090,7 @@ exports.POKEMON = {
       chs: "三蜜蜂",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 415,
     games: [
       "diamond",
@@ -5132,7 +5132,7 @@ exports.POKEMON = {
       chs: "力壮鸡",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 256,
     games: [
       "ruby",
@@ -5478,7 +5478,7 @@ exports.POKEMON = {
       cht: "搖籃百合",
       chs: "摇篮百合",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "both",
     natdex: 346,
     games: [
@@ -5668,7 +5668,7 @@ exports.POKEMON = {
       chs: "不良蛙",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 453,
     games: [
       "diamond",
@@ -6062,7 +6062,7 @@ exports.POKEMON = {
       chs: "达克莱伊",
     },
     gender: "unknown",
-    mythical: True,
+    mythical: true,
     natdex: 491,
     games: [
       "diamond",
@@ -6546,7 +6546,7 @@ exports.POKEMON = {
       chs: "普通形态",
     },
     gender: "unknown",
-    mythical: True,
+    mythical: true,
     natdex: 386,
     games: [
       "ruby",
@@ -6755,7 +6755,7 @@ exports.POKEMON = {
       chs: "蒂安希",
     },
     gender: "unknown",
-    mythical: True,
+    mythical: true,
     natdex: 719,
     games: [
       "x",
@@ -6935,7 +6935,7 @@ exports.POKEMON = {
       chs: "嘟嘟利",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 85,
     games: [
       "red-eng",
@@ -6992,7 +6992,7 @@ exports.POKEMON = {
       chs: "嘟嘟",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 84,
     games: [
       "red-eng",
@@ -7047,7 +7047,7 @@ exports.POKEMON = {
       chs: "顿甲",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 232,
     games: [
       "gold",
@@ -8106,7 +8106,7 @@ exports.POKEMON = {
       chs: "毒粉蛾",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 269,
     games: [
       "ruby",
@@ -8249,7 +8249,7 @@ exports.POKEMON = {
     evowarnmon: "sylveon",
     evowarngen: 8,
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 133,
     games: [
       "red-eng",
@@ -9488,7 +9488,7 @@ exports.POKEMON = {
       chs: "荧光鱼",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 456,
     games: [
       "diamond",
@@ -9808,7 +9808,7 @@ exports.POKEMON = {
       chs: "浮潜鼬",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 419,
     games: [
       "diamond",
@@ -10133,7 +10133,7 @@ exports.POKEMON = {
       cht: "佛烈托斯",
       chs: "佛烈托斯",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "both",
     natdex: 205,
     games: [
@@ -10219,7 +10219,7 @@ exports.POKEMON = {
       chs: "轻飘飘",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 592,
     games: [
       "black",
@@ -10578,7 +10578,7 @@ exports.POKEMON = {
       chs: "尖牙陆鲨",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 444,
     games: [
       "diamond",
@@ -10727,7 +10727,7 @@ exports.POKEMON = {
       chs: "烈咬陆鲨",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 445,
     games: [
       "diamond",
@@ -10945,7 +10945,7 @@ exports.POKEMON = {
       chs: "盖诺赛克特",
     },
     gender: "unknown",
-    mythical: True,
+    mythical: true,
     natdex: 649,
     games: [
       "black",
@@ -11100,7 +11100,7 @@ exports.POKEMON = {
       chs: "圆陆鲨",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 443,
     games: [
       "diamond",
@@ -11174,7 +11174,7 @@ exports.POKEMON = {
       chs: "麒麟奇",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 203,
     games: [
       "gold",
@@ -11409,7 +11409,7 @@ exports.POKEMON = {
       chs: "天蝎",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 207,
     games: [
       "gold",
@@ -11500,7 +11500,7 @@ exports.POKEMON = {
       chs: "臭臭花",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 44,
     games: [
       "red-eng",
@@ -11586,7 +11586,7 @@ exports.POKEMON = {
       chs: "大嘴蝠",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 42,
     games: [
       "red-eng",
@@ -11645,7 +11645,7 @@ exports.POKEMON = {
       chs: "角金鱼",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 118,
     games: [
       "red-eng",
@@ -12757,7 +12757,7 @@ exports.POKEMON = {
       chs: "溶食兽",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 316,
     games: [
       "ruby",
@@ -12871,7 +12871,7 @@ exports.POKEMON = {
       chs: "暴鲤龙",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 130,
     games: [
       "platinum",
@@ -13314,7 +13314,7 @@ exports.POKEMON = {
       chs: "赫拉克罗斯",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 214,
     games: [
       "ss",
@@ -13399,7 +13399,7 @@ exports.POKEMON = {
       chs: "沙河马",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 449,
     games: [
       "diamond",
@@ -13441,7 +13441,7 @@ exports.POKEMON = {
       chs: "河马兽",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 450,
     games: [
       "diamond",
@@ -13780,7 +13780,7 @@ exports.POKEMON = {
       chs: "惩戒",
     },
     gender: "unknown",
-    mythical: True,
+    mythical: true,
     natdex: 720,
     games: [
       "x",
@@ -13963,7 +13963,7 @@ exports.POKEMON = {
       chs: "黑鲁加",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 229,
     games: [
       "gold",
@@ -14141,7 +14141,7 @@ exports.POKEMON = {
       chs: "引梦貘人",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 97,
     games: [
       "red-eng",
@@ -14328,7 +14328,7 @@ exports.POKEMON = {
       chs: "爱管侍",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 876,
     games: ["sw", "sh", "scar", "vio"],
   },
@@ -14491,7 +14491,7 @@ exports.POKEMON = {
       chs: "胖嘟嘟",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 593,
     games: [
       "black",
@@ -14583,7 +14583,7 @@ exports.POKEMON = {
       chs: "基拉祈",
     },
     gender: "unknown",
-    mythical: True,
+    mythical: true,
     natdex: 385,
     games: [
       "ruby",
@@ -14828,7 +14828,7 @@ exports.POKEMON = {
       cht: "化石盔",
       chs: "化石盔",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "both",
     natdex: 140,
     games: [
@@ -14943,7 +14943,7 @@ exports.POKEMON = {
       chs: "勇基拉",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 64,
     games: [
       "red-eng",
@@ -15001,7 +15001,7 @@ exports.POKEMON = {
       cht: "鐵殼蛹",
       chs: "铁壳蛹",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "both",
     natdex: 14,
     games: [
@@ -15230,7 +15230,7 @@ exports.POKEMON = {
       chs: "平常的样子",
     },
     gender: "unknown",
-    mythical: True,
+    mythical: true,
     natdex: 647,
     games: [
       "black",
@@ -15708,7 +15708,7 @@ exports.POKEMON = {
       chs: "圆法师",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 401,
     games: [
       "diamond",
@@ -15748,7 +15748,7 @@ exports.POKEMON = {
       chs: "音箱蟀",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 402,
     games: [
       "diamond",
@@ -16422,7 +16422,7 @@ exports.POKEMON = {
       chs: "安瓢虫",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 166,
     games: [
       "gold",
@@ -16471,7 +16471,7 @@ exports.POKEMON = {
       chs: "芭瓢虫",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 165,
     games: [
       "gold",
@@ -16648,7 +16648,7 @@ exports.POKEMON = {
       cht: "觸手百合",
       chs: "触手百合",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "both",
     natdex: 345,
     games: [
@@ -17118,7 +17118,7 @@ exports.POKEMON = {
       chs: "乐天河童",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 272,
     games: [
       "ruby",
@@ -17216,7 +17216,7 @@ exports.POKEMON = {
       chs: "霓虹鱼",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 457,
     games: [
       "diamond",
@@ -17274,7 +17274,7 @@ exports.POKEMON = {
       cht: "月石",
       chs: "月石",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "unknown",
     natdex: 337,
     games: [
@@ -17384,7 +17384,7 @@ exports.POKEMON = {
       chs: "勒克猫",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 404,
     games: [
       "diamond",
@@ -17427,7 +17427,7 @@ exports.POKEMON = {
       chs: "伦琴猫",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 405,
     games: [
       "diamond",
@@ -17813,7 +17813,7 @@ exports.POKEMON = {
       chs: "玛机雅娜",
     },
     gender: "unknown",
-    mythical: True,
+    mythical: true,
     natdex: 801,
     games: ["sun", "moon", "usun", "umoon", "sw", "sh", "scar", "vio"],
   },
@@ -17830,7 +17830,7 @@ exports.POKEMON = {
       chs: "鲤鱼王",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 129,
     games: [
       "red-eng",
@@ -17988,7 +17988,7 @@ exports.POKEMON = {
       cht: "小磁怪",
       chs: "小磁怪",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "unknown",
     natdex: 81,
     games: [
@@ -18048,7 +18048,7 @@ exports.POKEMON = {
       cht: "三合一磁怪",
       chs: "三合一磁怪",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "unknown",
     natdex: 82,
     games: [
@@ -18110,7 +18110,7 @@ exports.POKEMON = {
       cht: "自爆磁怪",
       chs: "自爆磁怪",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "unknown",
     natdex: 462,
     games: [
@@ -18217,7 +18217,7 @@ exports.POKEMON = {
       chs: "象牙猪",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 473,
     games: [
       "diamond",
@@ -18260,7 +18260,7 @@ exports.POKEMON = {
       chs: "玛纳霏",
     },
     gender: "unknown",
-    mythical: True,
+    mythical: true,
     natdex: 490,
     games: [
       "diamond",
@@ -18739,7 +18739,7 @@ exports.POKEMON = {
       chs: "玛夏多",
     },
     gender: "unknown",
-    mythical: True,
+    mythical: true,
     natdex: 802,
     games: ["sun", "moon", "usun", "umoon", "sw", "sh"],
     flags: ["restricted"],
@@ -18895,7 +18895,7 @@ exports.POKEMON = {
       chs: "恰雷姆",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 308,
     games: [
       "ruby",
@@ -18942,7 +18942,7 @@ exports.POKEMON = {
       chs: "玛沙那",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 307,
     games: [
       "ruby",
@@ -18989,7 +18989,7 @@ exports.POKEMON = {
       chs: "大竺葵",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 154,
     games: [
       "gold",
@@ -19037,7 +19037,7 @@ exports.POKEMON = {
       chs: "美录梅塔",
     },
     gender: "unknown",
-    mythical: True,
+    mythical: true,
     natdex: 809,
     games: ["lgp", "lge", "sw", "sh"],
     flags: ["restricted"],
@@ -19056,7 +19056,7 @@ exports.POKEMON = {
       chs: "美洛耶塔",
     },
     gender: "unknown",
-    mythical: True,
+    mythical: true,
     natdex: 648,
     games: [
       "y",
@@ -19089,7 +19089,7 @@ exports.POKEMON = {
       chs: "美录坦",
     },
     gender: "unknown",
-    mythical: True,
+    mythical: true,
     natdex: 808,
     games: ["lgp", "lge", "sw", "sh"],
     flags: ["restricted"],
@@ -19107,7 +19107,7 @@ exports.POKEMON = {
       chs: "超能妙喵",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 678,
     games: ["x", "y", "or", "as", "sw", "sh", "sun", "moon", "usun", "umoon"],
     evolvesFrom: "espurr",
@@ -19292,7 +19292,7 @@ exports.POKEMON = {
       cht: "金屬怪",
       chs: "金属怪",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "unknown",
     natdex: 375,
     games: [
@@ -19339,7 +19339,7 @@ exports.POKEMON = {
       cht: "鐵甲蛹",
       chs: "铁甲蛹",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "both",
     natdex: 11,
     games: [
@@ -19398,7 +19398,7 @@ exports.POKEMON = {
       chs: "梦幻",
     },
     gender: "unknown",
-    mythical: True,
+    mythical: true,
     natdex: 151,
     games: [
       "red-eng",
@@ -19646,7 +19646,7 @@ exports.POKEMON = {
       chs: "美纳斯",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 350,
     games: [
       "black",
@@ -20562,7 +20562,7 @@ exports.POKEMON = {
       chs: "黑暗鸦",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 198,
     games: [
       "gold",
@@ -21099,7 +21099,7 @@ exports.POKEMON = {
       cht: "土居忍士",
       chs: "土居忍士",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "both",
     natdex: 290,
     games: [
@@ -21380,7 +21380,7 @@ exports.POKEMON = {
       cht: "朝北鼻",
       chs: "朝北鼻",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "both",
     natdex: 299,
     games: [
@@ -21429,7 +21429,7 @@ exports.POKEMON = {
       chs: "呆火驼",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 322,
     games: [
       "ruby",
@@ -21476,7 +21476,7 @@ exports.POKEMON = {
       chs: "长鼻叶",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 274,
     games: [
       "ruby",
@@ -21542,7 +21542,7 @@ exports.POKEMON = {
       chs: "章鱼桶",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 224,
     games: [
       "gold",
@@ -21970,7 +21970,7 @@ exports.POKEMON = {
       chs: "帕奇利兹",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 417,
     games: [
       "diamond",
@@ -22220,7 +22220,7 @@ exports.POKEMON = {
       cht: "派拉斯",
       chs: "派拉斯",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "both",
     natdex: 46,
     games: [
@@ -22277,7 +22277,7 @@ exports.POKEMON = {
       cht: "派拉斯特",
       chs: "派拉斯特",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "both",
     natdex: 47,
     games: [
@@ -22683,7 +22683,7 @@ exports.POKEMON = {
       chs: "霏欧纳",
     },
     gender: "unknown",
-    mythical: True,
+    mythical: true,
     natdex: 489,
     games: [
       "as",
@@ -23034,7 +23034,7 @@ exports.POKEMON = {
       cht: "換裝",
       chs: "换装",
     },
-    femsprite: False,
+    femsprite: false,
     gender: "female",
     games: ["or", "as"],
     sort: 8,
@@ -23052,7 +23052,7 @@ exports.POKEMON = {
       cht: "換裝 [貴婦]",
       chs: "换装 [貴婦]",
     },
-    femsprite: False,
+    femsprite: false,
     gender: "female",
     games: ["or", "as"],
     sort: 10,
@@ -23070,7 +23070,7 @@ exports.POKEMON = {
       cht: "換裝 [幪面]",
       chs: "换装 [蒙面]",
     },
-    femsprite: False,
+    femsprite: false,
     gender: "female",
     games: ["or", "as"],
     sort: 13,
@@ -23088,7 +23088,7 @@ exports.POKEMON = {
       cht: "換裝 [博士]",
       chs: "换装 [博士]",
     },
-    femsprite: False,
+    femsprite: false,
     gender: "female",
     games: ["or", "as"],
     sort: 12,
@@ -23106,7 +23106,7 @@ exports.POKEMON = {
       cht: "換裝 [偶像]",
       chs: "换装 [偶像]",
     },
-    femsprite: False,
+    femsprite: false,
     gender: "female",
     games: ["or", "as"],
     sort: 11,
@@ -23124,7 +23124,7 @@ exports.POKEMON = {
       cht: "換裝 [重搖滾]",
       chs: "换装 [重搖滾]",
     },
-    femsprite: False,
+    femsprite: false,
     gender: "female",
     games: ["or", "as"],
     sort: 9,
@@ -23263,7 +23263,7 @@ exports.POKEMON = {
     gender: "both",
     evowarnmon: "raichu-alola",
     evowarngen: 7,
-    femsprite: True,
+    femsprite: true,
     natdex: 25,
     games: [
       "red-eng",
@@ -23340,7 +23340,7 @@ exports.POKEMON = {
       chs: "长毛猪",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 221,
     games: [
       "gold",
@@ -23409,7 +23409,7 @@ exports.POKEMON = {
       cht: "榛果球",
       chs: "榛果球",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "both",
     natdex: 204,
     games: [
@@ -23615,7 +23615,7 @@ exports.POKEMON = {
       chs: "蚊香蛙皇",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 186,
     games: [
       "gold",
@@ -23984,7 +23984,7 @@ exports.POKEMON = {
       cht: "多邊獸Ｚ",
       chs: "多边兽乙型",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "unknown",
     natdex: 474,
     games: [
@@ -24025,7 +24025,7 @@ exports.POKEMON = {
       cht: "多邊獸",
       chs: "多边兽",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "unknown",
     natdex: 137,
     games: [
@@ -24083,7 +24083,7 @@ exports.POKEMON = {
       cht: "多邊獸Ⅱ",
       chs: "多边兽２型",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "unknown",
     natdex: 233,
     games: [
@@ -24249,7 +24249,7 @@ exports.POKEMON = {
       cht: "大朝北鼻",
       chs: "大朝北鼻",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "both",
     natdex: 476,
     games: [
@@ -24422,7 +24422,7 @@ exports.POKEMON = {
       cht: "沙基拉斯",
       chs: "沙基拉斯",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "both",
     natdex: 247,
     games: [
@@ -24544,7 +24544,7 @@ exports.POKEMON = {
       chs: "火炎狮",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 668,
     games: [
       "x",
@@ -24589,7 +24589,7 @@ exports.POKEMON = {
       chs: "沼王",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 195,
     games: [
       "gold",
@@ -24787,7 +24787,7 @@ exports.POKEMON = {
   "raichu-alola": {
     "data-source": "raichu",
     "form-source": "alola",
-    femsprite: False,
+    femsprite: false,
     games: [
       "sun",
       "moon",
@@ -24815,7 +24815,7 @@ exports.POKEMON = {
       chs: "雷丘",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 26,
     games: [
       "sw",
@@ -25067,7 +25067,7 @@ exports.POKEMON = {
   "raticate-alola": {
     "data-source": "raticate",
     "form-source": "alola",
-    femsprite: False,
+    femsprite: false,
     games: ["sun", "moon", "usun", "umoon", "lgp", "lge"],
     evolvesFrom: "rattata-alola",
   },
@@ -25084,7 +25084,7 @@ exports.POKEMON = {
       chs: "拉达",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 20,
     games: [
       "red-eng",
@@ -25131,7 +25131,7 @@ exports.POKEMON = {
   "rattata-alola": {
     "data-source": "rattata",
     "form-source": "alola",
-    femsprite: False,
+    femsprite: false,
     games: ["sun", "moon", "usun", "umoon", "lgp", "lge"],
   },
   rattata: {
@@ -25147,7 +25147,7 @@ exports.POKEMON = {
       chs: "小拉达",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 19,
     games: [
       "red-eng",
@@ -25249,7 +25249,7 @@ exports.POKEMON = {
       cht: "雷吉艾斯",
       chs: "雷吉艾斯",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "unknown",
     natdex: 378,
     games: [
@@ -25327,7 +25327,7 @@ exports.POKEMON = {
       cht: "雷吉奇卡斯",
       chs: "雷吉奇卡斯",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "unknown",
     natdex: 486,
     games: [
@@ -25367,7 +25367,7 @@ exports.POKEMON = {
       cht: "雷吉洛克",
       chs: "雷吉洛克",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "unknown",
     natdex: 377,
     games: [
@@ -25413,7 +25413,7 @@ exports.POKEMON = {
       cht: "雷吉斯奇魯",
       chs: "雷吉斯奇鲁",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "unknown",
     natdex: 379,
     games: [
@@ -25460,7 +25460,7 @@ exports.POKEMON = {
       chs: "古空棘鱼",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 369,
     games: [
       "ruby",
@@ -25505,7 +25505,7 @@ exports.POKEMON = {
       cht: "鐵炮魚",
       chs: "铁炮鱼",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "both",
     natdex: 223,
     games: [
@@ -25621,7 +25621,7 @@ exports.POKEMON = {
       chs: "钻角犀兽",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 112,
     games: [
       "red-eng",
@@ -25681,7 +25681,7 @@ exports.POKEMON = {
       chs: "独角犀牛",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 111,
     games: [
       "green",
@@ -25739,7 +25739,7 @@ exports.POKEMON = {
       chs: "超甲狂犀",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 464,
     games: [
       "diamond",
@@ -25934,7 +25934,7 @@ exports.POKEMON = {
       chs: "毒蔷薇",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 315,
     games: [
       "ruby",
@@ -25983,7 +25983,7 @@ exports.POKEMON = {
       chs: "罗丝雷朵",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 407,
     games: [
       "diamond",
@@ -26782,7 +26782,7 @@ exports.POKEMON = {
       chs: "巨钳螳螂",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 212,
     games: [
       "pearl",
@@ -26947,7 +26947,7 @@ exports.POKEMON = {
       chs: "飞天螳螂",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     evowarnmon: "kleavor",
     evowarngen: 8,
     natdex: 123,
@@ -27067,7 +27067,7 @@ exports.POKEMON = {
       chs: "金鱼王",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 119,
     games: [
       "lg",
@@ -27171,7 +27171,7 @@ exports.POKEMON = {
       cht: "橡實果",
       chs: "橡实果",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "both",
     natdex: 273,
     games: [
@@ -27563,7 +27563,7 @@ exports.POKEMON = {
       chs: "陆上形态",
     },
     gender: "unknown",
-    mythical: True,
+    mythical: true,
     natdex: 492,
     games: [
       "diamond",
@@ -27649,7 +27649,7 @@ exports.POKEMON = {
       cht: "甲殼龍",
       chs: "甲壳龙",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "both",
     natdex: 372,
     games: [
@@ -27892,7 +27892,7 @@ exports.POKEMON = {
       chs: "狡猾天狗",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 275,
     games: [
       "ss",
@@ -27958,7 +27958,7 @@ exports.POKEMON = {
       chs: "小猫怪",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 403,
     games: [
       "diamond",
@@ -28170,7 +28170,7 @@ exports.POKEMON = {
       cht: "甲殼繭",
       chs: "甲壳茧",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "both",
     natdex: 266,
     games: [
@@ -29163,7 +29163,7 @@ exports.POKEMON = {
       chs: "狃拉",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 215,
     games: [
       "gold",
@@ -29388,7 +29388,7 @@ exports.POKEMON = {
       chs: "雪笠怪",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 459,
     games: [
       "diamond",
@@ -29540,7 +29540,7 @@ exports.POKEMON = {
       cht: "太陽岩",
       chs: "太阳岩",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "unknown",
     natdex: 338,
     games: [
@@ -30052,7 +30052,7 @@ exports.POKEMON = {
       chs: "姆克鹰",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 398,
     games: [
       "diamond",
@@ -30093,7 +30093,7 @@ exports.POKEMON = {
       chs: "姆克鸟",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 397,
     games: [
       "diamond",
@@ -30134,7 +30134,7 @@ exports.POKEMON = {
       chs: "姆克儿",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 396,
     games: [
       "diamond",
@@ -30173,7 +30173,7 @@ exports.POKEMON = {
       cht: "寶石海星",
       chs: "宝石海星",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "unknown",
     natdex: 121,
     games: [
@@ -30232,7 +30232,7 @@ exports.POKEMON = {
       cht: "海星星",
       chs: "海星星",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "unknown",
     natdex: 120,
     games: [
@@ -30290,7 +30290,7 @@ exports.POKEMON = {
       chs: "大钢蛇",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 208,
     games: [
       "black",
@@ -30499,7 +30499,7 @@ exports.POKEMON = {
       chs: "树才怪",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 185,
     games: [
       "gold",
@@ -30825,7 +30825,7 @@ exports.POKEMON = {
       chs: "吞食兽",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 317,
     games: [
       "ruby",
@@ -31257,7 +31257,7 @@ exports.POKEMON = {
       chs: "巨蔓藤",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 465,
     games: [
       "diamond",
@@ -32013,7 +32013,7 @@ exports.POKEMON = {
       chs: "火稚鸡",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 255,
     games: [
       "ruby",
@@ -32295,7 +32295,7 @@ exports.POKEMON = {
       chs: "毒骷蛙",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 454,
     games: [
       "diamond",
@@ -33017,7 +33017,7 @@ exports.POKEMON = {
       chs: "高傲雉鸡",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 521,
     games: [
       "black",
@@ -33143,7 +33143,7 @@ exports.POKEMON = {
       chs: "未知图腾",
     },
     "forms-all": "A",
-    voiceless: True,
+    voiceless: true,
     gender: "unknown",
     natdex: 201,
     sort: 1,
@@ -33224,7 +33224,7 @@ exports.POKEMON = {
       chs: "圈圈熊",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     evowarnmon: "ursaluna",
     evowarngen: 8,
     natdex: 217,
@@ -33546,7 +33546,7 @@ exports.POKEMON = {
       cht: "摩魯蛾",
       chs: "摩鲁蛾",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "both",
     natdex: 49,
     games: [
@@ -33662,7 +33662,7 @@ exports.POKEMON = {
       chs: "妙蛙花",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 3,
     games: [
       "red-eng",
@@ -33809,7 +33809,7 @@ exports.POKEMON = {
       chs: "比克提尼",
     },
     gender: "unknown",
-    mythical: True,
+    mythical: true,
     natdex: 494,
     games: [
       "black",
@@ -33962,7 +33962,7 @@ exports.POKEMON = {
       chs: "霸王花",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 45,
     games: [
       "sw",
@@ -34401,7 +34401,7 @@ exports.POKEMON = {
       chs: "波尔凯尼恩",
     },
     gender: "unknown",
-    mythical: True,
+    mythical: true,
     natdex: 721,
     games: [
       "x",
@@ -34864,7 +34864,7 @@ exports.POKEMON = {
       chs: "玛狃拉",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 461,
     games: [
       "diamond",
@@ -35380,7 +35380,7 @@ exports.POKEMON = {
       chs: "果然翁",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 202,
     games: [
       "gold",
@@ -35467,7 +35467,7 @@ exports.POKEMON = {
   "wooper-paldea": {
     "data-source": "wooper",
     "form-source": "paldea",
-    femsprite: False,
+    femsprite: false,
     games: ["scar", "vio"],
   },
   wooper: {
@@ -35483,7 +35483,7 @@ exports.POKEMON = {
       chs: "乌波",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 194,
     games: [
       "gold",
@@ -35716,9 +35716,9 @@ exports.POKEMON = {
       cht: "天然鳥",
       chs: "天然鸟",
     },
-    voiceless: True,
+    voiceless: true,
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 178,
     games: [
       "gold",
@@ -36134,7 +36134,7 @@ exports.POKEMON = {
       chs: "萨戮德",
     },
     gender: "unknown",
-    mythical: True,
+    mythical: true,
     natdex: 893,
     games: ["sw", "sh", "scar", "vio"],
     flags: ["restricted"],
@@ -36214,7 +36214,7 @@ exports.POKEMON = {
       chs: "捷拉奥拉",
     },
     gender: "unknown",
-    mythical: True,
+    mythical: true,
     natdex: 807,
     games: ["usun", "umoon", "sw", "sh"],
     flags: ["restricted"],
@@ -36362,7 +36362,7 @@ exports.POKEMON = {
       chs: "超音蝠",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 41,
     games: [
       "red-eng",
@@ -36665,7 +36665,7 @@ exports.POKEMON = {
       chs: "飘香豚",
     },
     gender: "both",
-    femsprite: True,
+    femsprite: true,
     natdex: 916,
     games: ["scar", "vio"],
     evolvesFrom: "lechonk",
