@@ -2,7 +2,7 @@ const { EmbedBuilder } = require('discord.js');
 
 const { BULBAPEDIA_SUFFIX, BULBAPEDIA_URI, SPRITE_FILE_EXTENSION, SPRITE_URI, AFFIRMATIVE_EMOJI, NEGATIVE_EMOJI, COLORS, FOOTER, FAVICON_URI, WARNING_EMOJI } = require('../constants');
 const { POKEMON } = require('../data/pokemon');
-const { GAMES } = require('../data/misc');
+const { GAMES, COMMON_FORMS } = require('../data/misc');
 const { GetLatestGen, GetGenById, GetGamesByGen, GetNameById } = require('./gameHelper');
 
 const BuildBulbapediaUri = exports.BuildBulbapediaUri = function(name) {
@@ -19,14 +19,9 @@ const ConvertNameToKey = exports.ConvertNameToKey = function(name) {
 
 exports.CreatePokemonEmbed = function(key, pokemonData) {
     let embed = new EmbedBuilder();
-
-    if ('data-source' in pokemonData) {
-      dataSource = GetPokemonData(pokemonData['data-source']);
-      pokemonData = { ...dataSource, ...pokemonData };
-  }
     
     embed.setColor(COLORS.Default);
-    embed.setTitle(pokemonData.names.eng);
+    embed.setTitle(GetNameWithForm(pokemonData));
     embed.setURL(BuildBulbapediaUri(pokemonData.names.eng.replaceAll(' ', '_')));
     embed.setThumbnail(BuildSpriteUri(key));
     embed.setFooter({ text: FOOTER, iconURL: FAVICON_URI });
@@ -35,13 +30,13 @@ exports.CreatePokemonEmbed = function(key, pokemonData) {
 
     fields.push(CreatePokemonField(pokemonData));
 
-    if ('evolvesFrom' in pokemonData) {
+    if (pokemonData.evolvesFrom) {
         let prevolutionData = GetPokemonData(pokemonData.evolvesFrom);
         
         while (prevolutionData) {
             fields.push(CreatePokemonField(prevolutionData));
             
-            prevolutionData = 'evolvesFrom' in prevolutionData ? GetPokemonData(prevolutionData.evolvesFrom) : null;
+            prevolutionData = prevolutionData.evolvesFrom ? GetPokemonData(prevolutionData.evolvesFrom) : null;
         }
     }
 
@@ -79,7 +74,7 @@ const CreatePokemonField = function(pokemonData) {
         for (let warning of warnings) description.push(`${WARNING_EMOJI} ${warning}`);
     }
 
-    return { name: pokemonData.names.eng, value: description.join('\n'), inline: true };
+    return { name: GetNameWithForm(pokemonData), value: description.join('\n'), inline: true };
 }
 
 const FilterGamesListByGen = exports.FilterGamesListByGen = function(pokemonData, gen) {
@@ -103,8 +98,29 @@ const FindEarliestGen = exports.FindEarliestGeneration = function(pokemonData) {
     return earliestGen;
 }
 
+const GetNameWithForm = function(pokemonData) {
+    let result = '';
+
+    if (pokemonData.forms) result += `${pokemonData.forms.eng.replaceAll(' Form', '')} `;
+
+    result += pokemonData.names.eng;
+
+    return result;
+}
+
 const GetPokemonData = exports.GetPokemonData = function(name) {
     let key = ConvertNameToKey(name);
+    let pokemonData = POKEMON[key];
 
-    return POKEMON[key];
+    if (pokemonData['data-source']) {
+        let dataSource = POKEMON[pokemonData['data-source']];
+        pokemonData = { ...dataSource, ...pokemonData };
+    }
+
+    if (pokemonData['form-source']) {
+        let formSource = COMMON_FORMS[pokemonData['form-source']];
+        pokemonData.forms = formSource;
+    }
+
+    return pokemonData;
 };
