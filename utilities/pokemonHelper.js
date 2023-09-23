@@ -75,6 +75,8 @@ const CreatePokemonField = function(pokemonData) {
         for (let warning of warnings) description.push(`${WARNING_EMOJI} ${warning}`);
     }
 
+    description.push('~~     ~~');
+
     return { name: GetNameWithForm(pokemonData), value: description.join('\n'), inline: true };
 }
 
@@ -127,3 +129,11 @@ const GetPokemonData = exports.GetPokemonData = function(name) {
 
     return pokemonData;
 };
+
+exports.SearchByName = function(query) {
+    let forms = []; 
+    
+    Object.keys(COMMON_FORMS).forEach(key => forms.push(COMMON_FORMS[key].eng.replaceAll(' Form', '')));
+
+
+}
