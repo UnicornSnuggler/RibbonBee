@@ -20,7 +20,10 @@ const ConvertNameToKey = exports.ConvertNameToKey = function(name) {
 exports.CreatePokemonEmbed = function(key, pokemonData) {
     let embed = new EmbedBuilder();
 
-    if ('data-source' in pokemonData) pokemonData = GetPokemonData(pokemonData['data-source']);
+    if ('data-source' in pokemonData) {
+      dataSource = GetPokemonData(pokemonData['data-source']);
+      pokemonData = { ...dataSource, ...pokemonData };
+  }
     
     embed.setColor(COLORS.Default);
     embed.setTitle(pokemonData.names.eng);
@@ -56,8 +59,8 @@ const CreatePokemonField = function(pokemonData) {
 
     let shadows = [];
 
-    if (pokemonData.flags?.includes('colShadow')) shadows.push('Col');
-    if (pokemonData.flags?.includes('xdShadow')) shadows.push('XD');
+    if (pokemonData.flags?.includes('colShadow') && pokemonData.games.includes('colosseum')) shadows.push('Col');
+    if (pokemonData.flags?.includes('xdShadow') && pokemonData.games.includes('xd')) shadows.push('XD');
 
     description.push(`\n${shadows.length ? AFFIRMATIVE_EMOJI : NEGATIVE_EMOJI} Shadow${shadows.length ? ` *(${shadows.join(', ')})*` : ''}`);
 
