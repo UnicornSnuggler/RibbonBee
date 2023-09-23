@@ -112,6 +112,8 @@ const GetPokemonData = exports.GetPokemonData = function(name) {
     let key = ConvertNameToKey(name);
     let pokemonData = POKEMON[key];
 
+    if (!pokemonData) return null;
+
     if (pokemonData['data-source']) {
         let dataSource = POKEMON[pokemonData['data-source']];
         pokemonData = { ...dataSource, ...pokemonData };
