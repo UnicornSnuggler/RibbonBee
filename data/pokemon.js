@@ -12359,6 +12359,7 @@ exports.POKEMON = {
     },
     "gender": "male",
     "games": ["sun", "moon", "usun", "umoon", "scar", "vio"],
+    "evolvesFrom": null,
   },
   "greninja": {
     "names": {
@@ -23020,6 +23021,7 @@ exports.POKEMON = {
     "gender": "male",
     "games": ["sun", "moon", "usun", "umoon", "sw", "sh", "scar", "vio"],
     "sort": 6,
+    "evolvesFrom": null,
   },
   "pikachu-cosplay": {
     "data-source": "pikachu",
@@ -23038,6 +23040,7 @@ exports.POKEMON = {
     "gender": "female",
     "games": ["or", "as"],
     "sort": 8,
+    "evolvesFrom": null,
   },
   "pikachu-cosplay-belle": {
     "data-source": "pikachu",
@@ -23056,6 +23059,7 @@ exports.POKEMON = {
     "gender": "female",
     "games": ["or", "as"],
     "sort": 10,
+    "evolvesFrom": null,
   },
   "pikachu-cosplay-libre": {
     "data-source": "pikachu",
@@ -23074,6 +23078,7 @@ exports.POKEMON = {
     "gender": "female",
     "games": ["or", "as"],
     "sort": 13,
+    "evolvesFrom": null,
   },
   "pikachu-cosplay-phd": {
     "data-source": "pikachu",
@@ -23092,6 +23097,7 @@ exports.POKEMON = {
     "gender": "female",
     "games": ["or", "as"],
     "sort": 12,
+    "evolvesFrom": null,
   },
   "pikachu-cosplay-popstar": {
     "data-source": "pikachu",
@@ -23110,6 +23116,7 @@ exports.POKEMON = {
     "gender": "female",
     "games": ["or", "as"],
     "sort": 11,
+    "evolvesFrom": null,
   },
   "pikachu-cosplay-rockstar": {
     "data-source": "pikachu",
@@ -23128,6 +23135,7 @@ exports.POKEMON = {
     "gender": "female",
     "games": ["or", "as"],
     "sort": 9,
+    "evolvesFrom": null,
   },
   "pikachu-hoenn-cap": {
     "data-source": "pikachu",
@@ -23145,6 +23153,7 @@ exports.POKEMON = {
     "gender": "male",
     "games": ["sun", "moon", "usun", "umoon", "sw", "sh", "scar", "vio"],
     "sort": 2,
+    "evolvesFrom": null,
   },
   "pikachu-kalos-cap": {
     "data-source": "pikachu",
@@ -23162,6 +23171,7 @@ exports.POKEMON = {
     "gender": "male",
     "games": ["sun", "moon", "usun", "umoon", "sw", "sh", "scar", "vio"],
     "sort": 5,
+    "evolvesFrom": null,
   },
   "pikachu-original-cap": {
     "data-source": "pikachu",
@@ -23179,6 +23189,7 @@ exports.POKEMON = {
     "gender": "male",
     "games": ["sun", "moon", "usun", "umoon", "sw", "sh", "scar", "vio"],
     "sort": 1,
+    "evolvesFrom": null,
   },
   "pikachu-partner-cap": {
     "data-source": "pikachu",
@@ -23196,6 +23207,7 @@ exports.POKEMON = {
     "gender": "male",
     "games": ["sun", "moon", "usun", "umoon", "sw", "sh", "scar", "vio"],
     "sort": 7,
+    "evolvesFrom": null,
   },
   "pikachu-sinnoh-cap": {
     "data-source": "pikachu",
@@ -23213,6 +23225,7 @@ exports.POKEMON = {
     "gender": "male",
     "games": ["sun", "moon", "usun", "umoon", "sw", "sh", "scar", "vio"],
     "sort": 3,
+    "evolvesFrom": null,
   },
   "pikachu-unova-cap": {
     "data-source": "pikachu",
@@ -23230,6 +23243,7 @@ exports.POKEMON = {
     "gender": "male",
     "games": ["sun", "moon", "usun", "umoon", "sw", "sh", "scar", "vio"],
     "sort": 4,
+    "evolvesFrom": null,
   },
   "pikachu-world-cap": {
     "data-source": "pikachu",
@@ -23247,6 +23261,7 @@ exports.POKEMON = {
     "gender": "male",
     "games": ["sw", "sh", "scar", "vio"],
     "sort": 7,
+    "evolvesFrom": null,
   },
   "pikachu": {
     "names": {
@@ -33193,6 +33208,8 @@ exports.POKEMON = {
       "cht": "赫月",
       "chs": "赫月",
     },
+    "games": ["scar", "vio"],
+    "evolvesFrom": null,
   },
   "ursaluna": {
     "names": {
