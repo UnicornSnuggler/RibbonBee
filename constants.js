@@ -23,7 +23,8 @@ exports.SPRITE_URI = 'https://raw.githubusercontent.com/Azekthi/Ribbons.Guide/ma
 exports.SPRITE_FILE_EXTENSION = '.png';
 
 exports.WARNINGS = {
-    'overFifty': ' can only be caught as a shadow Pokémon above level 50...'
+    overFifty: ' can only be caught as a shadow Pokémon above level 50...',
+    overSeventy: ' can only be caught as a non-event Pokémon above level 70...'
 };
 
 exports.MISC = 'misc';

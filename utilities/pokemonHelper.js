@@ -30,6 +30,8 @@ exports.CreatePokemonEmbed = function(key, pokemonData) {
     let fields = [];
     let warnings = [];
 
+    if (pokemonData.flags?.includes('overSeventy')) warnings.push(`${GetNameWithForm(pokemonData, true)}${WARNINGS.overSeventy}`);
+
     fields.push(CreatePokemonField(pokemonData, warnings));
 
     if (pokemonData.evolvesFrom) {
@@ -78,7 +80,7 @@ const CreatePokemonField = function(pokemonData, warnings) {
         shadowText += ` *(${shadows.join(', ')})*`;
 
         if (pokemonData.flags?.includes('overFifty')) {
-            warnings.push(`${GetNameWithForm(pokemonData)}${WARNINGS['overFifty']}`);
+            warnings.push(`${GetNameWithForm(pokemonData)}${WARNINGS.overFifty}`);
 
             // shadowText += ` ${WARNING_EMOJI}${SuperscriptNumber(warnings.length)}`;
             shadowText += ` ${WARNING_EMOJI}`;
@@ -120,10 +122,10 @@ const FindEarliestGen = exports.FindEarliestGeneration = function(pokemonData) {
     return earliestGen;
 }
 
-const GetNameWithForm = function(pokemonData) {
+const GetNameWithForm = function(pokemonData, foregoForm = false) {
     let result = '';
 
-    if (pokemonData.forms) result += `${pokemonData.forms.eng.replaceAll(/ form(?!e)/gi, '')} `;
+    if (pokemonData.forms && !foregoForm) result += `${pokemonData.forms.eng.replaceAll(/ form(?!e)/gi, '')} `;
 
     result += pokemonData.names.eng;
 

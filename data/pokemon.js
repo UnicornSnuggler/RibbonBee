@@ -6576,7 +6576,7 @@ exports.POKEMON = {
       "colosseum",
       "xd",
     ],
-    "flags": ["restricted"],
+    "flags": ["overSeventy", "restricted"],
   },
   "dewgong": {
     "names": {
