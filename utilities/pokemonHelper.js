@@ -63,7 +63,7 @@ const CreatePokemonField = function(pokemonData, warnings) {
 
     let earliestGen = FindEarliestGen(pokemonData);
 
-    description.push(`Generation ${earliestGen}`);
+    description.push(`RM Beginning:\n*Generation ${earliestGen}*`);
 
     description.push(`\n${pokemonData.flags?.includes('restricted') ? `${PADLOCK_LOCKED_EMOJI} Restricted` : `${PADLOCK_UNLOCKED_EMOJI} Unrestricted`}`);
 
@@ -108,12 +108,14 @@ const FilterGamesListByGen = exports.FilterGamesListByGen = function(pokemonData
 const FindEarliestGen = exports.FindEarliestGeneration = function(pokemonData) {
     let latestGen = GetLatestGen();
     let earliestGen = latestGen;
-
+    
     for (let index = 0; index < pokemonData.games.length; index++) {
         let thisGen = GetGenById(pokemonData.games[index]);
-
+        
         if (thisGen < earliestGen && thisGen > 2) earliestGen = thisGen;
     }
+    
+    if (earliestGen == 8 && pokemonData.natdex > 905) earliestGen = 9;
 
     return earliestGen;
 }
