@@ -16,8 +16,12 @@ exports.FOOTER = 'Powered by data from ribbons.guide';
 
 exports.BULBAPEDIA_URI = 'https://bulbapedia.bulbagarden.net/wiki/';
 exports.BULBAPEDIA_SUFFIX = '_(Pok%C3%A9mon)';
+exports.BULBAPEDIA_RIBBONS_URI = 'https://bulbapedia.bulbagarden.net/wiki/List_of_Ribbons_in_the_games';
 
 exports.FAVICON_URI = 'https://raw.githubusercontent.com/Azekthi/Ribbons.Guide/main/img/icons/favicon-32x32.png';
+
+exports.RIBBON_IMAGE_URI = 'https://raw.githubusercontent.com/Azekthi/Ribbons.Guide/main/img/ribbons/';
+exports.RIBBON_IMAGE_FILE_EXTENSION = '.png';
 
 exports.SPRITE_URI = 'https://raw.githubusercontent.com/Azekthi/Ribbons.Guide/main/img/pkmn/regular/';
 exports.SPRITE_FILE_EXTENSION = '.png';
