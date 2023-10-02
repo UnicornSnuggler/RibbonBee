@@ -42,7 +42,7 @@ exports.GetEligibleRibbons = function(pokemonData, origin) {
     };
 
     for (let key of Object.keys(ALL_RIBBONS)) {
-        if (['battle-memory-ribbon', 'contest-memory-ribbon'].includes(key)) continue;
+        if (['battle-memory-ribbon', 'contest-memory-ribbon', 'jumbo-mark'].includes(key)) continue;
 
         let ribbon = ALL_RIBBONS[key];
 
@@ -68,6 +68,14 @@ exports.GetEligibleRibbons = function(pokemonData, origin) {
 
             if (key == 'national-ribbon') {
                 if (!pokemonData.flags?.includes('colShadow') && !pokemonData.flags?.includes('xdShadow')) continue;
+            }
+
+            if (key == 'mini-mark') {
+                if (!pokemonData.games.some(game => ['scar', 'vio'].includes(game))) continue;
+                else {
+                    ribbons.possible.push(ribbon);
+                    continue;
+                }
             }
 
             ribbons.guaranteed.push(ribbon);
