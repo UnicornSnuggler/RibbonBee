@@ -42,7 +42,7 @@ exports.GetEligibleRibbons = function(pokemonData, origin) {
     };
 
     for (let key of Object.keys(ALL_RIBBONS)) {
-        if (['battle-memory-ribbon', 'contest-memory-ribbon', 'jumbo-mark'].includes(key)) continue;
+        if (['battle-memory-ribbon-gold', 'contest-memory-ribbon-gold', 'jumbo-mark'].includes(key)) continue;
 
         let ribbon = ALL_RIBBONS[key];
 
@@ -50,19 +50,19 @@ exports.GetEligibleRibbons = function(pokemonData, origin) {
             if (pokemonData.flags?.includes('restricted')) {
                 if (RESTRICTED_RIBBONS.includes(key)) continue;
                 else if (key == 'battle-tree-great-ribbon') {
-                    ribbons.possible.push(ribbon);
+                    ribbons.possible.push(ribbon.names.eng);
                     continue;
                 }
                 else if (key == 'tower-master-ribbon' && !pokemonData.games.some(game => ['sw', 'sh'].includes(game))) continue;
             }
             
             if (pokemonData.flags?.includes('overFifty') && ['national-ribbon', 'winning-ribbon'].includes(key)) {
-                ribbons.contingent.push(ribbon);
+                ribbons.contingent.push(ribbon.names.eng);
                 continue;
             }
 
             if (pokemonData.flags?.includes('overSeventy') && key == 'footprint-ribbon') {
-                ribbons.possible.push(ribbon);
+                ribbons.possible.push(ribbon.names.eng);
                 continue;
             }
 
@@ -73,12 +73,12 @@ exports.GetEligibleRibbons = function(pokemonData, origin) {
             if (key == 'mini-mark') {
                 if (!pokemonData.games.some(game => ['scar', 'vio'].includes(game))) continue;
                 else {
-                    ribbons.possible.push(ribbon);
+                    ribbons.possible.push(`${ribbon.names.eng}/${ALL_RIBBONS['jumbo-mark'].names.eng}`);
                     continue;
                 }
             }
 
-            ribbons.guaranteed.push(ribbon);
+            ribbons.guaranteed.push(ribbon.names.eng);
         }
     }
 

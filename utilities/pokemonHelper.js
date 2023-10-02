@@ -19,7 +19,7 @@ const ConvertNameToKey = exports.ConvertNameToKey = function(name) {
     return name.toLowerCase().replaceAll('.', '').replaceAll(' ', '-');
 }
 
-exports.CreatePokemonEmbed = function(key, pokemonData, origin, prevolutions, verbose) {
+exports.CreatePokemonEmbed = function(key, pokemonData, origin, prevolutions) {
     let embed = new EmbedBuilder();
     
     embed.setColor(COLORS.Default);
@@ -64,6 +64,33 @@ exports.CreatePokemonEmbed = function(key, pokemonData, origin, prevolutions, ve
     return embed;
 }
 
+exports.CreateVerbosePokemonEmbed = function(key, pokemonData, origin) {
+    let embed = new EmbedBuilder();
+    
+    embed.setColor(COLORS.Default);
+    embed.setTitle(GetNameWithForm(pokemonData));
+    embed.setURL(BuildBulbapediaUri(pokemonData.names.eng.replaceAll(' ', '_')));
+    embed.setThumbnail(BuildSpriteUri(key));
+    embed.setFooter({ text: FOOTER, iconURL: FAVICON_URI });
+
+    let eligibleRibbons = GetEligibleRibbons(pokemonData, origin);
+
+    for (let key of Object.keys(eligibleRibbons)) {
+        if (eligibleRibbons[key].length) {
+            let contents = [];
+    
+            for (let ribbon of eligibleRibbons[key]) {
+                contents.push(`* ${ribbon}`);
+            }
+
+            if (key == 'guaranteed') embed.setDescription(`**Guaranteed Ribbons**\n${contents.join('\n')}`);
+            else embed.addFields({ name: `**${key.charAt(0).toUpperCase()}${key.slice(1)} Ribbons**`, value: contents.join('\n') });
+        }
+    }
+
+    return embed;
+}
+
 const CreatePokemonField = function(pokemonData, origin, warnings) {
     let description = [];
     let subWarnings = [];
@@ -78,7 +105,7 @@ const CreatePokemonField = function(pokemonData, origin, warnings) {
 
     if (pokemonData.flags?.includes('overSeventy')) subWarnings.push(`${GetNameWithForm(pokemonData, true)}${WARNINGS.overSeventy}`);
 
-    description.push(`RM Beginning:\n*Generation ${earliestGen}*`);
+    description.push(`RM Beginning:\n*Generation ${(origin ?? earliestGen) == 8 ? '8/9' : origin ?? earliestGen}*`);
 
     description.push(`\n${pokemonData.flags?.includes('restricted') ? `${PADLOCK_LOCKED_EMOJI} R` : `${PADLOCK_UNLOCKED_EMOJI} Unr`}estricted`);
 
@@ -109,22 +136,17 @@ const CreatePokemonField = function(pokemonData, origin, warnings) {
 
     let eligibleRibbons = GetEligibleRibbons(pokemonData, origin);
     
-    description.push(`\n**Ribbon Totals**\n\`\`\`${eligibleRibbons.guaranteed.length.toString().padStart(3)} Guaranteed\n${eligibleRibbons.possible.length.toString().padStart(3)} Possible\n${(eligibleRibbons.contingent.length / 2).toString().padStart(3)} Contingent\`\`\``);
+    description.push('\n**Ribbon Totals**');
+    description.push(`\`\`\`${eligibleRibbons.guaranteed.length.toString().padStart(3)} Guaranteed`);
+    description.push(`${eligibleRibbons.possible.length.toString().padStart(3)} Possible`);
+    description.push(`${(eligibleRibbons.contingent.length / 2).toString().padStart(3)} Contingent\`\`\``);
 
     if (subWarnings.length) warnings.push(subWarnings);
 
     return { name: GetNameWithForm(pokemonData), value: description.join('\n'), inline: true };
 }
 
-const FilterGamesListByGen = exports.FilterGamesListByGen = function(pokemonData, gen) {
-    let gameIds = GetGamesByGen(gen);
-
-    let games = pokemonData.games.filter(x => gameIds.includes(x));
-
-    return games;
-}
-
-const FindEarliestGen = exports.FindEarliestGeneration = function(pokemonData) {
+const FindEarliestGen = function(pokemonData) {
     let latestGen = GetLatestGen();
     let earliestGen = latestGen;
     
@@ -134,7 +156,7 @@ const FindEarliestGen = exports.FindEarliestGeneration = function(pokemonData) {
         if (thisGen < earliestGen && thisGen > 2) earliestGen = thisGen;
     }
     
-    if (earliestGen == 8 && pokemonData.natdex > 905) earliestGen = 9;
+    // if (earliestGen == 8 && pokemonData.natdex > 905) earliestGen = 9;
 
     return earliestGen;
 }

@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('discord.js');
-const { GetPokemonData, ConvertNameToKey, CreatePokemonEmbed } = require('../utilities/pokemonHelper');
+const { GetPokemonData, ConvertNameToKey, CreatePokemonEmbed, CreateVerbosePokemonEmbed } = require('../utilities/pokemonHelper');
 const { SendContentAsEmbed, SendMessageWithOptions } = require('../utilities/messageHelper');
 const { ReportError } = require('../utilities/errorHelper');
 
@@ -23,8 +23,7 @@ module.exports = {
                     { name: 'Generation 5 (Black, White, Black 2, White 2)', value: 5 },
                     { name: 'Generation 6 (X, Y, Omega Ruby, Alpha Sapphire)', value: 6 },
                     { name: 'Generation 7 (Sun, Moon, Ultra Sun, Ultra Moon, Let\'s Go, Pikachu!, Let\'s Go, Eevee!)', value: 7 },
-                    { name: 'Generation 8 (Sword, Shield, Brilliant Diamond, Shining Pearl, Legends: Arceus)', value: 8 },
-                    { name: 'Generation 9 (Scarlet, Violet)', value: 8 }
+                    { name: 'Generation 8/9 (Sword, Shield, Brilliant Diamond, Shining Pearl, Legends: Arceus, Scarlet, Violet)', value: 8 }
                 ))
         .addBooleanOption(option =>
             option
@@ -47,7 +46,10 @@ module.exports = {
             let pokemonData = GetPokemonData(nameOption);
 
             if (!pokemonData) SendContentAsEmbed(interaction, `'${nameOption}' (\`${key}\`) could not be found...`);
-            else SendMessageWithOptions(interaction, { embeds: [CreatePokemonEmbed(key, pokemonData, origin, prevolutions, verbose)] });
+            else {
+                if (verbose) SendMessageWithOptions(interaction, { embeds: [CreateVerbosePokemonEmbed(key, pokemonData, origin)] });
+                else SendMessageWithOptions(interaction, { embeds: [CreatePokemonEmbed(key, pokemonData, origin, prevolutions)] });
+            }
         }
         catch (error) {
             ReportError(interaction, error);
