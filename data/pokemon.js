@@ -8791,6 +8791,7 @@ exports.POKEMON = {
     "gender": "female",
     "natdex": 905,
     "games": ["pla", "scar", "vio"],
+    "flags": ["sizeLocked"],
   },
   "entei": {
     "names": {

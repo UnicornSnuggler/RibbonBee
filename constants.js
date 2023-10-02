@@ -57,3 +57,19 @@ exports.WARNINGS = {
 exports.MISC = 'misc';
 exports.POKEMON = 'pokemon';
 exports.RIBBONS = 'ribbons';
+
+exports.POKEMON_OUTPUT_IMAGE = 'https://i.imgur.com/MnqM49u.png';
+exports.RIBBON_OUTPUT_IMAGE = 'https://i.imgur.com/dTlMNBr.png';
+
+exports.CREDITS = {
+    unicorn: '132708937584607233',
+    sly: '131039651094855680',
+    mercuryEnigma: '276935302747127808',
+    corn: '1107787666335989823',
+    sirToastyToes: '147154136184389632',
+    ribombunny: '463837316700700683',
+    psychicJ: '404235244913557505',
+    kestrel: '316769883759181824',
+    sadisticMystic: '172553256109604864',
+    regiultima: '270639221050572800'
+};

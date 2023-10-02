@@ -28,8 +28,6 @@ exports.CreateRibbonEmbed = function(key, ribbonData) {
     if (ribbonData.descs) description.push(`${ribbonData.descs?.eng}\n`);
     if (ribbonData.available) description.push(`**Available Games**:\n${ribbonData.available.map(game => `* ${GetNameById(game)}`).join('\n')}`);
 
-    description.push('~~     ~~');
-
     embed.setDescription(description.join('\n'));
 
     return embed;
