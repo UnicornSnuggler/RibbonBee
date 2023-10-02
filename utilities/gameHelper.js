@@ -1,6 +1,6 @@
 const { GAMES } = require('../data/misc');
 
-exports.GetGamesByGen = function(gen) {
+const GetGamesByGen = exports.GetGamesByGen = function(gen) {
     let results = [];
 
     for (var key in GAMES) {
@@ -16,7 +16,7 @@ exports.GetGenById = function(id) {
     return GAMES[id].gen;
 }
 
-exports.GetLatestGen = function() {
+const GetLatestGen = exports.GetLatestGen = function() {
     let latestGen = 1;
 
     for (var key in GAMES) {
@@ -30,4 +30,15 @@ exports.GetLatestGen = function() {
 
 exports.GetNameById = function(id) {
     return GAMES[id].name;
+}
+
+exports.FilterGamesList = function(pokemonData, origin) {
+    let latestGen = GetLatestGen();
+    let filteredGames = [];
+
+    for (let generation = origin; generation <= latestGen; generation++) {
+        GetGamesByGen(generation).forEach(gameId => filteredGames.push(gameId));
+    }
+
+    return pokemonData.games.filter(x => filteredGames.includes(x));
 }

@@ -3,6 +3,7 @@ const { EmbedBuilder } = require('discord.js');
 const { COLORS, FOOTER, FAVICON_URI, RIBBON_IMAGE_URI, RIBBON_IMAGE_FILE_EXTENSION, BULBAPEDIA_RIBBONS_URI, RESTRICTED_RIBBONS } = require('../constants');
 const { GetNameById } = require('./gameHelper');
 const { ALL_RIBBONS } = require('../data/ribbons');
+const { FilterGamesList } = require('./gameHelper');
 
 const BuildRibbonImageUri = exports.BuildRibbonImageUri = function(name) {
     return `${RIBBON_IMAGE_URI}${name}${RIBBON_IMAGE_FILE_EXTENSION}`;
@@ -45,8 +46,9 @@ exports.GetEligibleRibbons = function(pokemonData, origin) {
         if (['battle-memory-ribbon-gold', 'contest-memory-ribbon-gold', 'jumbo-mark'].includes(key)) continue;
 
         let ribbon = ALL_RIBBONS[key];
+        let applicableGames = FilterGamesList(pokemonData, origin);
 
-        if (origin <= ribbon.gen && pokemonData.games.some(game => ribbon.available?.includes(game))) {
+        if (applicableGames.some(game => ribbon.available?.includes(game))) {
             if (pokemonData.flags?.includes('restricted')) {
                 if (RESTRICTED_RIBBONS.includes(key)) continue;
                 else if (key == 'battle-tree-great-ribbon') {
