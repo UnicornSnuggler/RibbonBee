@@ -26,9 +26,27 @@ exports.RIBBON_IMAGE_FILE_EXTENSION = '.png';
 exports.SPRITE_URI = 'https://raw.githubusercontent.com/Azekthi/Ribbons.Guide/main/img/pkmn/regular/';
 exports.SPRITE_FILE_EXTENSION = '.png';
 
+exports.RESTRICTED_RIBBONS = [
+    'winning-ribbon',
+    'victory-ribbon',
+    'ability-ribbon',
+    'great-ability-ribbon',
+    'double-ability-ribbon',
+    'multi-ability-ribbon',
+    'pair-ability-ribbon',
+    'world-ability-ribbon',
+    'battle-memory-ribbon',
+    'battle-memory-ribbon-gold',
+    'skillful-battler-ribbon',
+    'expert-battler-ribbon',
+    'battle-royal-master-ribbon',
+    'battle-tree-master-ribbon'
+];
+
 exports.WARNINGS = {
-    overFifty: ' can only be caught as a shadow Pokémon above level 50...',
-    overSeventy: ' can only be caught as a non-event Pokémon above level 70...'
+    notCatchable: ' is not a catchable Pokémon in Generation ',
+    overFifty: ' can only be caught as a shadow Pokémon above level 50, disqualifying it from the Winning Ribbon',
+    overSeventy: ' can only be caught as a non-event Pokémon above level 70, disqualifying it from the Footprint Ribbon'
 };
 
 exports.MISC = 'misc';

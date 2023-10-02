@@ -2,9 +2,10 @@ const { EmbedBuilder } = require('discord.js');
 
 const { BULBAPEDIA_SUFFIX, BULBAPEDIA_URI, SPRITE_FILE_EXTENSION, SPRITE_URI, AFFIRMATIVE_EMOJI, NEGATIVE_EMOJI, COLORS, FOOTER, FAVICON_URI, WARNING_EMOJI, WARNINGS, PADLOCK_LOCKED_EMOJI, PADLOCK_UNLOCKED_EMOJI } = require('../constants');
 const { POKEMON } = require('../data/pokemon');
-const { COMMON_FORMS } = require('../data/misc');
+const { COMMON_FORMS, GAMES } = require('../data/misc');
 const { GetLatestGen, GetGenById, GetGamesByGen } = require('./gameHelper');
 const { SuperscriptNumber } = require('./stringHelper');
+const { GetEligibleRibbons } = require('./ribbonHelper');
 
 const BuildBulbapediaUri = exports.BuildBulbapediaUri = function(name) {
     return `${BULBAPEDIA_URI}${name}${BULBAPEDIA_SUFFIX}`;
@@ -18,7 +19,7 @@ const ConvertNameToKey = exports.ConvertNameToKey = function(name) {
     return name.toLowerCase().replaceAll('.', '').replaceAll(' ', '-');
 }
 
-exports.CreatePokemonEmbed = function(key, pokemonData) {
+exports.CreatePokemonEmbed = function(key, pokemonData, origin, prevolutions, verbose) {
     let embed = new EmbedBuilder();
     
     embed.setColor(COLORS.Default);
@@ -30,15 +31,17 @@ exports.CreatePokemonEmbed = function(key, pokemonData) {
     let fields = [];
     let warnings = [];
 
-    if (pokemonData.flags?.includes('overSeventy')) warnings.push(`${GetNameWithForm(pokemonData, true)}${WARNINGS.overSeventy}`);
+    let field = CreatePokemonField(pokemonData, origin, warnings);
 
-    fields.push(CreatePokemonField(pokemonData, warnings));
+    if (field) fields.push(field);
 
-    if (pokemonData.evolvesFrom) {
+    if (prevolutions && pokemonData.evolvesFrom) {
         let prevolutionData = GetPokemonData(pokemonData.evolvesFrom);
         
         while (prevolutionData) {
-            fields.push(CreatePokemonField(prevolutionData));
+            field = CreatePokemonField(prevolutionData, origin, warnings);
+
+            if (field) fields.push(field);
             
             prevolutionData = prevolutionData.evolvesFrom ? GetPokemonData(prevolutionData.evolvesFrom) : null;
         }
@@ -46,28 +49,38 @@ exports.CreatePokemonEmbed = function(key, pokemonData) {
 
     while (fields.length) embed.addFields(fields.pop());
 
-    if (warnings.length) {
-        let warningsText = [];
+    let warningsText = [];
 
-        for (let index = 0; index < warnings.length; index++) {
-            // warningsText.push(`${WARNING_EMOJI}${SuperscriptNumber(index + 1)} ${warnings[index]}`);
-            warningsText.push(`${WARNING_EMOJI} ${warnings[index]}`);
+    while (warnings.length) {
+        let subWarnings = warnings.pop();
+
+        for (let warning of subWarnings) {
+            warningsText.push(warning);
         }
-
-        embed.addFields({ name: '**Warnings**', value: warningsText.join('\n') });
     }
+    
+    if (warningsText.length) embed.addFields({ name: '**Warnings**', value: warningsText.map(warning => `${WARNING_EMOJI} ${warning}`).join('\n') });
 
     return embed;
 }
 
-const CreatePokemonField = function(pokemonData, warnings) {
+const CreatePokemonField = function(pokemonData, origin, warnings) {
     let description = [];
+    let subWarnings = [];
 
     let earliestGen = FindEarliestGen(pokemonData);
 
+    if (origin && origin < earliestGen) {
+        warnings.push([`${GetNameWithForm(pokemonData)}${WARNINGS.notCatchable}${origin}`]);
+        
+        return null;
+    }
+
+    if (pokemonData.flags?.includes('overSeventy')) subWarnings.push(`${GetNameWithForm(pokemonData, true)}${WARNINGS.overSeventy}`);
+
     description.push(`RM Beginning:\n*Generation ${earliestGen}*`);
 
-    description.push(`\n${pokemonData.flags?.includes('restricted') ? `${PADLOCK_LOCKED_EMOJI} Restricted` : `${PADLOCK_UNLOCKED_EMOJI} Unrestricted`}`);
+    description.push(`\n${pokemonData.flags?.includes('restricted') ? `${PADLOCK_LOCKED_EMOJI} R` : `${PADLOCK_UNLOCKED_EMOJI} Unr`}estricted`);
 
     let shadows = [];
 
@@ -80,7 +93,7 @@ const CreatePokemonField = function(pokemonData, warnings) {
         shadowText += ` *(${shadows.join(', ')})*`;
 
         if (pokemonData.flags?.includes('overFifty')) {
-            warnings.push(`${GetNameWithForm(pokemonData)}${WARNINGS.overFifty}`);
+            subWarnings.push(`${GetNameWithForm(pokemonData)}${WARNINGS.overFifty}`);
 
             // shadowText += ` ${WARNING_EMOJI}${SuperscriptNumber(warnings.length)}`;
             shadowText += ` ${WARNING_EMOJI}`;
@@ -94,7 +107,11 @@ const CreatePokemonField = function(pokemonData, warnings) {
     description.push(`${pokemonData.games.includes('pla') ? AFFIRMATIVE_EMOJI : NEGATIVE_EMOJI} Hisui`);
     description.push(`${pokemonData.games.includes('scar') || pokemonData.games.includes('vio') ? AFFIRMATIVE_EMOJI : NEGATIVE_EMOJI} Paldea`);
 
-    description.push('~~     ~~');
+    let eligibleRibbons = GetEligibleRibbons(pokemonData, origin);
+    
+    description.push(`\n**Ribbon Totals**\n\`\`\`${eligibleRibbons.guaranteed.length.toString().padStart(3)} Guaranteed\n${eligibleRibbons.possible.length.toString().padStart(3)} Possible\n${(eligibleRibbons.contingent.length / 2).toString().padStart(3)} Contingent\`\`\``);
+
+    if (subWarnings.length) warnings.push(subWarnings);
 
     return { name: GetNameWithForm(pokemonData), value: description.join('\n'), inline: true };
 }

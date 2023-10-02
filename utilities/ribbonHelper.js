@@ -1,6 +1,6 @@
 const { EmbedBuilder } = require('discord.js');
 
-const { COLORS, FOOTER, FAVICON_URI, RIBBON_IMAGE_URI, RIBBON_IMAGE_FILE_EXTENSION, BULBAPEDIA_RIBBONS_URI } = require('../constants');
+const { COLORS, FOOTER, FAVICON_URI, RIBBON_IMAGE_URI, RIBBON_IMAGE_FILE_EXTENSION, BULBAPEDIA_RIBBONS_URI, RESTRICTED_RIBBONS } = require('../constants');
 const { GetNameById } = require('./gameHelper');
 const { ALL_RIBBONS } = require('../data/ribbons');
 
@@ -32,6 +32,49 @@ exports.CreateRibbonEmbed = function(key, ribbonData) {
     embed.setDescription(description.join('\n'));
 
     return embed;
+}
+
+exports.GetEligibleRibbons = function(pokemonData, origin) { 
+    let ribbons = {
+        guaranteed: [],
+        possible: [],
+        contingent: []
+    };
+
+    for (let key of Object.keys(ALL_RIBBONS)) {
+        if (['battle-memory-ribbon', 'contest-memory-ribbon'].includes(key)) continue;
+
+        let ribbon = ALL_RIBBONS[key];
+
+        if (origin <= ribbon.gen && pokemonData.games.some(game => ribbon.available?.includes(game))) {
+            if (pokemonData.flags?.includes('restricted')) {
+                if (RESTRICTED_RIBBONS.includes(key)) continue;
+                else if (key == 'battle-tree-great-ribbon') {
+                    ribbons.possible.push(ribbon);
+                    continue;
+                }
+                else if (key == 'tower-master-ribbon' && !pokemonData.games.some(game => ['sw', 'sh'].includes(game))) continue;
+            }
+            
+            if (pokemonData.flags?.includes('overFifty') && ['national-ribbon', 'winning-ribbon'].includes(key)) {
+                ribbons.contingent.push(ribbon);
+                continue;
+            }
+
+            if (pokemonData.flags?.includes('overSeventy') && key == 'footprint-ribbon') {
+                ribbons.possible.push(ribbon);
+                continue;
+            }
+
+            if (key == 'national-ribbon') {
+                if (!pokemonData.flags?.includes('colShadow') && !pokemonData.flags?.includes('xdShadow')) continue;
+            }
+
+            ribbons.guaranteed.push(ribbon);
+        }
+    }
+
+    return ribbons;
 }
 
 const GetName = function(ribbonData) {
