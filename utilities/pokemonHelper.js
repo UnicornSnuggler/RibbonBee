@@ -1,9 +1,10 @@
 const { EmbedBuilder } = require('discord.js');
+const fuzzy = require('./fuzzy');
 
 const { BULBAPEDIA_SUFFIX, BULBAPEDIA_URI, SPRITE_FILE_EXTENSION, SPRITE_URI, AFFIRMATIVE_EMOJI, NEGATIVE_EMOJI, COLORS, FOOTER, FAVICON_URI, WARNING_EMOJI, WARNINGS, PADLOCK_LOCKED_EMOJI, PADLOCK_UNLOCKED_EMOJI } = require('../constants');
 const { POKEMON } = require('../data/pokemon');
-const { COMMON_FORMS, GAMES } = require('../data/misc');
-const { GetLatestGen, GetGenById, GetGamesByGen } = require('./gameHelper');
+const { COMMON_FORMS } = require('../data/misc');
+const { GetLatestGen, GetGenById } = require('./gameHelper');
 const { SuperscriptNumber } = require('./stringHelper');
 const { GetEligibleRibbons } = require('./ribbonHelper');
 
@@ -165,8 +166,7 @@ const GetNameWithForm = function(pokemonData, foregoForm = false) {
     return result;
 }
 
-const GetPokemonData = exports.GetPokemonData = function(name) {
-    let key = ConvertNameToKey(name);
+const GetPokemonData = exports.GetPokemonData = function(key) {
     let pokemonData = POKEMON[key];
 
     if (!pokemonData) return null;
@@ -184,10 +184,28 @@ const GetPokemonData = exports.GetPokemonData = function(name) {
     return pokemonData;
 };
 
-// exports.SearchByName = function(query) {
-//     let forms = []; 
+exports.SearchByName = function(query) {
+    let matches = [];
+    let index = {};
     
-//     Object.keys(COMMON_FORMS).forEach(key => forms.push(COMMON_FORMS[key].eng.replaceAll(' Form', '')));
+    for (let key of Object.keys(POKEMON)) {
+        let data = null;
+        let form = null;
 
-    
-// }
+        if (POKEMON[key]['data-source']) data = POKEMON[POKEMON[key]['data-source']];
+        if (POKEMON[key]['form-source']) form = COMMON_FORMS[POKEMON[key]['form-source']];
+
+        let name = `${form ? `${form.eng} ` : POKEMON[key].forms ? `${POKEMON[key].forms.eng} ` : ''}${data ? data.names.eng : POKEMON[key].names.eng}`;
+
+        matches.push(fuzzy(name, query));
+        index[name] = key;
+        matches.push(fuzzy(key, query));
+        index[key] = key;
+    }
+
+    matches.sort(fuzzy.matchComparator);
+
+    let result = index[matches[0].term];
+
+    return result;
+}

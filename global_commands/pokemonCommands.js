@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('discord.js');
-const { GetPokemonData, ConvertNameToKey, CreatePokemonEmbed, CreateVerbosePokemonEmbed } = require('../utilities/pokemonHelper');
+const { GetPokemonData, CreatePokemonEmbed, CreateVerbosePokemonEmbed, SearchByName } = require('../utilities/pokemonHelper');
 const { SendContentAsEmbed, SendMessageWithOptions } = require('../utilities/messageHelper');
 const { ReportError } = require('../utilities/errorHelper');
 const { SPAM_CHANNELS } = require('../constants');
@@ -36,23 +36,23 @@ module.exports = {
                 .setDescription('Include a detailed breakdown of attainable ribbons by game.')),
     async execute(interaction) {        
         try {
-            let nameOption = interaction.options.getString('name').toLowerCase();
-            let key = ConvertNameToKey(nameOption);
+            let nameOption = interaction.options.getString('name');
+            let searchResult = SearchByName(nameOption);
             
             let origin = interaction.options.getInteger('origin');
 
             let prevolutions = interaction.options.getBoolean('show-prevolutions') ?? false;
             let verbose = interaction.options.getBoolean('verbose') ?? false;
 
-            let pokemonData = GetPokemonData(nameOption);
+            let pokemonData = GetPokemonData(searchResult);
 
-            if (!pokemonData) SendContentAsEmbed(interaction, `'${nameOption}' (\`${key}\`) could not be found...`);
+            if (!pokemonData) SendContentAsEmbed(interaction, `'${nameOption}' could not be found...`);
             else {
-                if (!verbose) SendMessageWithOptions(interaction, { embeds: [CreatePokemonEmbed(key, pokemonData, origin, prevolutions)] });
+                if (!verbose) SendMessageWithOptions(interaction, { embeds: [CreatePokemonEmbed(searchResult, pokemonData, origin, prevolutions)] });
                 else {
                     let ephemeral = interaction.guildId ? !SPAM_CHANNELS.includes(interaction.channelId) : false;
 
-                    SendMessageWithOptions(interaction, { embeds: [CreateVerbosePokemonEmbed(key, pokemonData, origin)] }, ephemeral);
+                    SendMessageWithOptions(interaction, { embeds: [CreateVerbosePokemonEmbed(searchResult, pokemonData, origin)] }, ephemeral);
                 }
             }
         }
