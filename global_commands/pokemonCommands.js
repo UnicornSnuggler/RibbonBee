@@ -2,6 +2,7 @@ const { SlashCommandBuilder } = require('discord.js');
 const { GetPokemonData, ConvertNameToKey, CreatePokemonEmbed, CreateVerbosePokemonEmbed } = require('../utilities/pokemonHelper');
 const { SendContentAsEmbed, SendMessageWithOptions } = require('../utilities/messageHelper');
 const { ReportError } = require('../utilities/errorHelper');
+const { SPAM_CHANNELS } = require('../constants');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -47,8 +48,12 @@ module.exports = {
 
             if (!pokemonData) SendContentAsEmbed(interaction, `'${nameOption}' (\`${key}\`) could not be found...`);
             else {
-                if (verbose) SendMessageWithOptions(interaction, { embeds: [CreateVerbosePokemonEmbed(key, pokemonData, origin)] });
-                else SendMessageWithOptions(interaction, { embeds: [CreatePokemonEmbed(key, pokemonData, origin, prevolutions)] });
+                if (!verbose) SendMessageWithOptions(interaction, { embeds: [CreatePokemonEmbed(key, pokemonData, origin, prevolutions)] });
+                else {
+                    let ephemeral = interaction.guildId ? !SPAM_CHANNELS.includes(interaction.channelId) : false;
+
+                    SendMessageWithOptions(interaction, { embeds: [CreateVerbosePokemonEmbed(key, pokemonData, origin)] }, ephemeral);
+                }
             }
         }
         catch (error) {

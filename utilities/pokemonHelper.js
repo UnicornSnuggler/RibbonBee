@@ -77,14 +77,8 @@ exports.CreateVerbosePokemonEmbed = function(key, pokemonData, origin) {
 
     for (let key of Object.keys(eligibleRibbons)) {
         if (eligibleRibbons[key].length) {
-            let contents = [];
-    
-            for (let ribbon of eligibleRibbons[key]) {
-                contents.push(`* ${ribbon}`);
-            }
-
-            if (key == 'guaranteed') embed.setDescription(`**Guaranteed Ribbons**\n${contents.join('\n')}`);
-            else embed.addFields({ name: `**${key.charAt(0).toUpperCase()}${key.slice(1)} Ribbons**`, value: contents.join('\n') });
+            if (key == 'guaranteed') embed.setDescription(`**Guaranteed Ribbons**\n\`\`\`${eligibleRibbons[key].join(', ')}\`\`\``);
+            else embed.addFields({ name: `**${key.charAt(0).toUpperCase()}${key.slice(1)} Ribbons**`, value: `\`\`\`${eligibleRibbons[key].join(', ')}\`\`\`` });
         }
     }
 

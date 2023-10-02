@@ -43,6 +43,11 @@ exports.RESTRICTED_RIBBONS = [
     'battle-tree-master-ribbon'
 ];
 
+exports.SPAM_CHANNELS = [
+    '1158447618905620550',
+    '1158447060421451806'
+];
+
 exports.WARNINGS = {
     notCatchable: ' is not a catchable Pokémon in Generation ',
     overFifty: ' can only be caught as a shadow Pokémon above level 50, disqualifying it from the Winning Ribbon',
