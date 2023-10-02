@@ -74,13 +74,13 @@ exports.CreateVerbosePokemonEmbed = function(key, pokemonData, origin) {
     embed.setFooter({ text: FOOTER, iconURL: FAVICON_URI });
 
     let eligibleRibbons = GetEligibleRibbons(pokemonData, origin);
+    let description = '';
 
-    for (let key of Object.keys(eligibleRibbons)) {
-        if (eligibleRibbons[key].length) {
-            if (key == 'guaranteed') embed.setDescription(`**Guaranteed Ribbons**\n\`\`\`${eligibleRibbons[key].join(', ')}\`\`\``);
-            else embed.addFields({ name: `**${key.charAt(0).toUpperCase()}${key.slice(1)} Ribbons**`, value: `\`\`\`${eligibleRibbons[key].join(', ')}\`\`\`` });
-        }
-    }
+    if (eligibleRibbons.guaranteed.length) description += `**Guaranteed Ribbons**\n\`\`\`${eligibleRibbons.guaranteed.join(', ')}\`\`\``;
+    if (eligibleRibbons.possible.length) description += `\n**Possible Ribbons**\n\`\`\`${eligibleRibbons.possible.join(', ')}\`\`\``;
+    if (eligibleRibbons.contingent.length) description += `\n**Contingent Ribbons**\n\`\`\`${eligibleRibbons.contingent.join(', ')}\`\`\``;
+
+    embed.setDescription(description);
 
     return embed;
 }
