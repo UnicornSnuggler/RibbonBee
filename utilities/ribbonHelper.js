@@ -73,7 +73,7 @@ exports.GetEligibleRibbons = function(pokemonData, origin) {
             }
 
             if (key == 'mini-mark') {
-                if (!pokemonData.games.some(game => ['scar', 'vio'].includes(game))) continue;
+                if (pokemonData.flags?.includes('sizeLocked') || !pokemonData.games.some(game => ['scar', 'vio'].includes(game))) continue;
                 else {
                     ribbons.possible.push(`${ribbon.names.eng}/${ALL_RIBBONS['jumbo-mark'].names.eng}`);
                     continue;

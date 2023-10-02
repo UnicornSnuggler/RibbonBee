@@ -33210,6 +33210,7 @@ exports.POKEMON = {
     },
     "games": ["scar", "vio"],
     "evolvesFrom": null,
+    "flags": ["sizeLocked"],
   },
   "ursaluna": {
     "names": {
@@ -38262,6 +38263,7 @@ exports.POKEMON = {
     "gender": "unknown",
     "natdex": 1001,
     "games": ["scar", "vio"],
+    "flags": ["sizeLocked"],
   },
   "chien-pao": {
     "names": {
@@ -38278,6 +38280,7 @@ exports.POKEMON = {
     "gender": "unknown",
     "natdex": 1002,
     "games": ["scar", "vio"],
+    "flags": ["sizeLocked"],
   },
   "ting-lu": {
     "names": {
@@ -38294,6 +38297,7 @@ exports.POKEMON = {
     "gender": "unknown",
     "natdex": 1003,
     "games": ["scar", "vio"],
+    "flags": ["sizeLocked"],
   },
   "chi-yu": {
     "names": {
@@ -38310,6 +38314,7 @@ exports.POKEMON = {
     "gender": "unknown",
     "natdex": 1004,
     "games": ["scar", "vio"],
+    "flags": ["sizeLocked"],
   },
   "roaring-moon": {
     "names": {
@@ -38358,7 +38363,7 @@ exports.POKEMON = {
     "gender": "unknown",
     "natdex": 1007,
     "games": ["scar", "vio"],
-    "flags": ["restricted"],
+    "flags": ["restricted", "sizeLocked"],
   },
   "miraidon": {
     "names": {
@@ -38375,7 +38380,7 @@ exports.POKEMON = {
     "gender": "unknown",
     "natdex": 1008,
     "games": ["scar", "vio"],
-    "flags": ["restricted"],
+    "flags": ["restricted", "sizeLocked"],
   },
   "walking-wake": {
     "names": {
@@ -38474,6 +38479,7 @@ exports.POKEMON = {
     "gender": "male",
     "natdex": 1014,
     "games": ["scar", "vio"],
+    "flags": ["sizeLocked"],
   },
   "munkidori": {
     "names": {
@@ -38490,6 +38496,7 @@ exports.POKEMON = {
     "gender": "male",
     "natdex": 1015,
     "games": ["scar", "vio"],
+    "flags": ["sizeLocked"],
   },
   "fezandipiti": {
     "names": {
@@ -38506,6 +38513,7 @@ exports.POKEMON = {
     "gender": "male",
     "natdex": 1016,
     "games": ["scar", "vio"],
+    "flags": ["sizeLocked"],
   },
   "ogerpon": {
     "names": {
@@ -38522,5 +38530,6 @@ exports.POKEMON = {
     "gender": "female",
     "natdex": 1017,
     "games": ["scar", "vio"],
+    "flags": ["sizeLocked"],
   },
 };
