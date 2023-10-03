@@ -901,7 +901,7 @@ exports.POKEMON = {
       "scar",
       "vio",
     ],
-    "flags": ["restricted"],
+    "flags": ["overSeventy", "restricted"],
   },
   "archen": {
     "names": {
