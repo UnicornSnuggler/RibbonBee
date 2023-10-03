@@ -49,11 +49,8 @@ exports.GetEligibleRibbons = function(pokemonData, origin) {
         if (applicableGames.some(game => ribbon.available?.includes(game))) {
             if (pokemonData.flags?.includes('restricted')) {
                 if (RESTRICTED_RIBBONS.includes(key)) continue;
-                else if (key == 'battle-tree-great-ribbon') {
-                    ribbons.possible.push(ribbon.names.eng);
-                    continue;
-                }
                 else if (key == 'tower-master-ribbon' && !pokemonData.games.some(game => ['sw', 'sh'].includes(game))) continue;
+                else if (key == 'master-rank-ribbon' && (pokemonData.mythical || !pokemonData.games.some(game => ['sw', 'sh'].includes(game)))) continue;
             }
             
             if (pokemonData.flags?.includes('overFifty') && ['national-ribbon', 'winning-ribbon'].includes(key)) {

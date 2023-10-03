@@ -39,8 +39,7 @@ exports.RESTRICTED_RIBBONS = [
     'battle-memory-ribbon-gold',
     'skillful-battler-ribbon',
     'expert-battler-ribbon',
-    'battle-royal-master-ribbon',
-    'battle-tree-master-ribbon'
+    'battle-royal-master-ribbon'
 ];
 
 exports.SPAM_CHANNELS = [
@@ -71,5 +70,6 @@ exports.CREDITS = {
     psychicJ: '404235244913557505',
     kestrel: '316769883759181824',
     sadisticMystic: '172553256109604864',
-    regiultima: '270639221050572800'
+    regiultima: '270639221050572800',
+    venty: '151205058535620608'
 };
