@@ -69,7 +69,7 @@ exports.CreateVerbosePokemonEmbed = function(key, pokemonData, origin) {
     embed.setThumbnail(BuildSpriteUri(key));
     embed.setFooter({ text: FOOTER, iconURL: FAVICON_URI });
 
-    let eligibleRibbons = GetEligibleRibbons(pokemonData, origin);
+    let eligibleRibbons = GetEligibleRibbons(pokemonData, origin ?? FindEarliestGen(pokemonData));
     let description = '';
 
     if (eligibleRibbons.guaranteed.length) description += `**Guaranteed Ribbons**\n\`\`\`${eligibleRibbons.guaranteed.join(', ')}\`\`\``;
@@ -124,7 +124,7 @@ const CreatePokemonField = function(pokemonData, origin, warnings) {
     description.push(`${pokemonData.games.includes('pla') ? AFFIRMATIVE_EMOJI : NEGATIVE_EMOJI} Hisui`);
     description.push(`${pokemonData.games.includes('scar') || pokemonData.games.includes('vio') ? AFFIRMATIVE_EMOJI : NEGATIVE_EMOJI} Paldea`);
 
-    let eligibleRibbons = GetEligibleRibbons(pokemonData, origin);
+    let eligibleRibbons = GetEligibleRibbons(pokemonData, origin ?? FindEarliestGen(pokemonData));
     
     description.push('\n**Ribbon Totals**');
     description.push(`\`\`\`${eligibleRibbons.guaranteed.length.toString().padStart(3)} Guaranteed`);

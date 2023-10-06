@@ -57,6 +57,7 @@ exports.MISC = 'misc';
 exports.POKEMON = 'pokemon';
 exports.RIBBONS = 'ribbons';
 
+exports.MASCOT_SPRITE = 'https://media.discordapp.net/attachments/1154903777296531486/1159899196434939956/IMG_5352.png';
 exports.POKEMON_OUTPUT_IMAGE = 'https://i.imgur.com/MnqM49u.png';
 exports.RIBBON_OUTPUT_IMAGE = 'https://i.imgur.com/dTlMNBr.png';
 
