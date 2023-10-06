@@ -1,9 +1,11 @@
 const { EmbedBuilder } = require('discord.js');
+const fuzzy = require('./fuzzy');
 
 const { COLORS, FOOTER, FAVICON_URI, RIBBON_IMAGE_URI, RIBBON_IMAGE_FILE_EXTENSION, BULBAPEDIA_RIBBONS_URI, RESTRICTED_RIBBONS } = require('../constants');
 const { GetNameById } = require('./gameHelper');
 const { ALL_RIBBONS } = require('../data/ribbons');
 const { FilterGamesList } = require('./gameHelper');
+const { FindEarliestGen } = require('./pokemonHelper');
 
 const BuildRibbonImageUri = exports.BuildRibbonImageUri = function(name) {
     return `${RIBBON_IMAGE_URI}${name}${RIBBON_IMAGE_FILE_EXTENSION}`;
@@ -39,18 +41,27 @@ exports.GetEligibleRibbons = function(pokemonData, origin) {
         possible: [],
         contingent: []
     };
+    
+    let applicableGames = FilterGamesList(pokemonData, origin);
+    let earliestGen = origin ?? FindEarliestGen(pokemonData);
 
     for (let key of Object.keys(ALL_RIBBONS)) {
         if (['battle-memory-ribbon-gold', 'contest-memory-ribbon-gold', 'jumbo-mark'].includes(key)) continue;
 
         let ribbon = ALL_RIBBONS[key];
-        let applicableGames = FilterGamesList(pokemonData, origin);
 
         if (applicableGames.some(game => ribbon.available?.includes(game))) {
             if (pokemonData.flags?.includes('restricted')) {
                 if (RESTRICTED_RIBBONS.includes(key)) continue;
                 else if (key == 'tower-master-ribbon' && !pokemonData.games.some(game => ['sw', 'sh'].includes(game))) continue;
                 else if (key == 'master-rank-ribbon' && (pokemonData.mythical || !pokemonData.games.some(game => ['sw', 'sh'].includes(game)))) continue;
+            }
+
+            if (['battle-memory-ribbon', 'contest-memory-ribbon'].includes(key) && earliestGen >= 5) continue;
+
+            if (key == 'world-ability-ribbon') {
+                ribbons.possible.push(ribbon.names.eng);
+                continue;
             }
             
             if (pokemonData.flags?.includes('overFifty') && ['national-ribbon', 'winning-ribbon'].includes(key)) {
@@ -88,11 +99,30 @@ const GetName = function(ribbonData) {
     return result;
 }
 
-exports.GetRibbonData = function(name) {
-    let key = ConvertNameToKey(name);
+exports.GetRibbonData = function(key) {
     let ribbonData = ALL_RIBBONS[key];
 
     if (!ribbonData) return null;
 
     return ribbonData;
 };
+
+exports.SearchByName = function(query) {
+    let matches = [];
+    let index = {};
+    
+    for (let key of Object.keys(ALL_RIBBONS)) {
+        let name = ALL_RIBBONS[key].names.eng;
+
+        matches.push(fuzzy(name, query));
+        index[name] = key;
+        matches.push(fuzzy(key, query));
+        index[key] = key;
+    }
+
+    matches.sort(fuzzy.matchComparator);
+
+    let result = index[matches[0].term];
+
+    return result;
+}

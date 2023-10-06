@@ -5,7 +5,6 @@ const { BULBAPEDIA_SUFFIX, BULBAPEDIA_URI, SPRITE_FILE_EXTENSION, SPRITE_URI, AF
 const { POKEMON } = require('../data/pokemon');
 const { COMMON_FORMS } = require('../data/misc');
 const { GetLatestGen, GetGenById } = require('./gameHelper');
-const { SuperscriptNumber } = require('./stringHelper');
 const { GetEligibleRibbons } = require('./ribbonHelper');
 
 const BuildBulbapediaUri = exports.BuildBulbapediaUri = function(name) {
@@ -14,10 +13,6 @@ const BuildBulbapediaUri = exports.BuildBulbapediaUri = function(name) {
 
 const BuildSpriteUri = exports.BuildSpriteUri = function(name) {
     return `${SPRITE_URI}${name}${SPRITE_FILE_EXTENSION}`;
-}
-
-const ConvertNameToKey = exports.ConvertNameToKey = function(name) {
-    return name.toLowerCase().replaceAll('.', '').replaceAll(' ', '-');
 }
 
 exports.CreatePokemonEmbed = function(key, pokemonData, origin, prevolutions) {
@@ -141,7 +136,7 @@ const CreatePokemonField = function(pokemonData, origin, warnings) {
     return { name: GetNameWithForm(pokemonData), value: description.join('\n'), inline: true };
 }
 
-const FindEarliestGen = function(pokemonData) {
+const FindEarliestGen = exports.FindEarliestGen = function(pokemonData) {
     let latestGen = GetLatestGen();
     let earliestGen = latestGen;
     
