@@ -42,6 +42,50 @@ exports.RESTRICTED_RIBBONS = [
     'battle-royal-master-ribbon'
 ];
 
+exports.CONTEST_RIBBONS = [
+    'cool-ribbon-hoenn',
+    'cool-ribbon-super-hoenn',
+    'cool-ribbon-hyper-hoenn',
+    'cool-ribbon-master-hoenn',
+    'beauty-ribbon-hoenn',
+    'beauty-ribbon-super-hoenn',
+    'beauty-ribbon-hyper-hoenn',
+    'beauty-ribbon-master-hoenn',
+    'cute-ribbon-hoenn',
+    'cute-ribbon-super-hoenn',
+    'cute-ribbon-hyper-hoenn',
+    'cute-ribbon-master-hoenn',
+    'smart-ribbon-hoenn',
+    'smart-ribbon-super-hoenn',
+    'smart-ribbon-hyper-hoenn',
+    'smart-ribbon-master-hoenn',
+    'tough-ribbon-hoenn',
+    'tough-ribbon-super-hoenn',
+    'tough-ribbon-hyper-hoenn',
+    'tough-ribbon-master-hoenn',
+    'cool-ribbon-sinnoh',
+    'cool-ribbon-great-sinnoh',
+    'cool-ribbon-ultra-sinnoh',
+    'cool-ribbon-master-sinnoh',
+    'beauty-ribbon-sinnoh',
+    'beauty-ribbon-great-sinnoh',
+    'beauty-ribbon-ultra-sinnoh',
+    'beauty-ribbon-master-sinnoh',
+    'cute-ribbon-sinnoh',
+    'cute-ribbon-great-sinnoh',
+    'cute-ribbon-ultra-sinnoh',
+    'cute-ribbon-master-sinnoh',
+    'smart-ribbon-sinnoh',
+    'smart-ribbon-great-sinnoh',
+    'smart-ribbon-ultra-sinnoh',
+    'smart-ribbon-master-sinnoh',
+    'tough-ribbon-sinnoh',
+    'tough-ribbon-great-sinnoh',
+    'tough-ribbon-ultra-sinnoh',
+    'tough-ribbon-master-sinnoh',
+    'contest-memory-ribbon'
+];
+
 exports.SPAM_CHANNELS = [
     '1158447618905620550',
     '1158447060421451806'
@@ -57,7 +101,7 @@ exports.MISC = 'misc';
 exports.POKEMON = 'pokemon';
 exports.RIBBONS = 'ribbons';
 
-exports.MASCOT_SPRITE = 'https://media.discordapp.net/attachments/1154903777296531486/1159899196434939956/IMG_5352.png';
+exports.MASCOT_SPRITE = 'https://media.discordapp.net/attachments/1154903777296531486/1160789510012031056/IMG_5366.png';
 exports.POKEMON_OUTPUT_IMAGE = 'https://i.imgur.com/MnqM49u.png';
 exports.RIBBON_OUTPUT_IMAGE = 'https://i.imgur.com/dTlMNBr.png';
 

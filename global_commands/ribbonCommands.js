@@ -1,6 +1,7 @@
 const { SlashCommandBuilder } = require('discord.js');
-const { GetRibbonData, ConvertNameToKey, CreateRibbonEmbed, SearchByName } = require('../utilities/ribbonHelper');
-const { SendContentAsEmbed, SendMessageWithOptions } = require('../utilities/messageHelper');
+
+const { GetRibbonData, SearchByName } = require('../utilities/ribbonHelper');
+const { SendContentAsEmbed, SendMessageWithOptions, CreateRibbonEmbed } = require('../utilities/messageHelper');
 const { ReportError } = require('../utilities/errorHelper');
 
 module.exports = {

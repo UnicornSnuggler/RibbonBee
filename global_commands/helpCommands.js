@@ -1,8 +1,9 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
+
+const { CREDITS, COLORS, FOOTER, FAVICON_URI, POKEMON_OUTPUT_IMAGE, AFFIRMATIVE_EMOJI, NEGATIVE_EMOJI, RIBBON_OUTPUT_IMAGE, SPAM_CHANNELS, MASCOT_SPRITE } = require('../constants');
+
 const { SendMessageWithOptions } = require('../utilities/messageHelper');
 const { ReportError } = require('../utilities/errorHelper');
-const { CREDITS, COLORS, FOOTER, FAVICON_URI, POKEMON_OUTPUT_IMAGE, AFFIRMATIVE_EMOJI, NEGATIVE_EMOJI, RIBBON_OUTPUT_IMAGE, SPAM_CHANNELS, MASCOT_SPRITE } = require('../constants');
-const { BuildSpriteUri } = require('../utilities/pokemonHelper');
 
 module.exports = {
     data: new SlashCommandBuilder()

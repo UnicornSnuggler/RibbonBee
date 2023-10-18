@@ -28,7 +28,7 @@ const GetLatestGen = exports.GetLatestGen = function() {
     return latestGen;
 };
 
-exports.GetNameById = function(id) {
+exports.GetGameNameById = function(id) {
     return GAMES[id].name;
 }
 

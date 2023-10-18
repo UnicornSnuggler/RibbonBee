@@ -1,37 +1,13 @@
-const { EmbedBuilder } = require('discord.js');
 const fuzzy = require('./fuzzy');
 
-const { COLORS, FOOTER, FAVICON_URI, RIBBON_IMAGE_URI, RIBBON_IMAGE_FILE_EXTENSION, BULBAPEDIA_RIBBONS_URI, RESTRICTED_RIBBONS } = require('../constants');
-const { GetNameById } = require('./gameHelper');
+const { RIBBON_IMAGE_URI, RIBBON_IMAGE_FILE_EXTENSION, RESTRICTED_RIBBONS, CONTEST_RIBBONS } = require('../constants');
 const { ALL_RIBBONS } = require('../data/ribbons');
+
 const { FilterGamesList } = require('./gameHelper');
+const { GetPokemonData, GetNameWithForm } = require('./pokemonHelper');
 
-const BuildRibbonImageUri = exports.BuildRibbonImageUri = function(name) {
+exports.BuildRibbonImageUri = function(name) {
     return `${RIBBON_IMAGE_URI}${name}${RIBBON_IMAGE_FILE_EXTENSION}`;
-}
-
-const ConvertNameToKey = exports.ConvertNameToKey = function(name) {
-    return name.toLowerCase().replaceAll('.', '').replaceAll(' ', '-');
-}
-
-exports.CreateRibbonEmbed = function(key, ribbonData) {
-    let embed = new EmbedBuilder();
-    
-    embed.setColor(COLORS.Default);
-    embed.setTitle(GetName(ribbonData));
-    embed.setURL(BULBAPEDIA_RIBBONS_URI);
-    embed.setThumbnail(BuildRibbonImageUri(key));
-    embed.setFooter({ text: FOOTER, iconURL: FAVICON_URI });
-
-    let description = [];
-
-    if (ribbonData.titles) description.push(`*"[Ribbon Master] ${ribbonData.titles.eng}"*\n`);
-    if (ribbonData.descs) description.push(`${ribbonData.descs?.eng}\n`);
-    if (ribbonData.available) description.push(`**Available Games**:\n${ribbonData.available.map(game => `* ${GetNameById(game)}`).join('\n')}`);
-
-    embed.setDescription(description.join('\n'));
-
-    return embed;
 }
 
 exports.GetEligibleRibbons = function(pokemonData, origin) { 
@@ -54,8 +30,10 @@ exports.GetEligibleRibbons = function(pokemonData, origin) {
                 else if (key == 'tower-master-ribbon' && !pokemonData.games.some(game => ['sw', 'sh'].includes(game))) continue;
                 else if (key == 'master-rank-ribbon' && (pokemonData.mythical || !pokemonData.games.some(game => ['sw', 'sh'].includes(game)))) continue;
             }
-
+            
             if (['battle-memory-ribbon', 'contest-memory-ribbon'].includes(key) && origin >= 5) continue;
+            
+            if (CONTEST_RIBBONS.includes(key) && GetNameWithForm(pokemonData, true).match(/ditto|unown/gi)) continue;
 
             if (key == 'world-ability-ribbon') {
                 ribbons.possible.push(ribbon.names.eng);
@@ -73,7 +51,22 @@ exports.GetEligibleRibbons = function(pokemonData, origin) {
             }
 
             if (key == 'national-ribbon') {
-                if (!pokemonData.flags?.includes('colShadow') && !pokemonData.flags?.includes('xdShadow')) continue;
+                let canBeShadow = false;
+                let prevolutionData = pokemonData;
+        
+                while (prevolutionData) {                    
+                    if (prevolutionData.flags?.includes('colShadow') || prevolutionData.flags?.includes('xdShadow')) {
+                        canBeShadow = true;
+                        prevolutionData = null;
+                        break;
+                    }
+
+                    prevolutionData = prevolutionData.evolvesFrom ? GetPokemonData(prevolutionData.evolvesFrom) : null;
+                }
+
+                if (canBeShadow) ribbons.possible.push(ribbon.names.eng);
+                
+                continue;
             }
 
             if (key == 'mini-mark') {
@@ -91,7 +84,7 @@ exports.GetEligibleRibbons = function(pokemonData, origin) {
     return ribbons;
 }
 
-const GetName = function(ribbonData) {
+exports.GetRibbonName = function(ribbonData) {
     let result = ribbonData.names.eng;
 
     return result;
