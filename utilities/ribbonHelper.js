@@ -35,6 +35,8 @@ exports.GetEligibleRibbons = function(pokemonData, origin) {
             
             if (CONTEST_RIBBONS.includes(key) && GetNameWithForm(pokemonData, true).match(/ditto|unown/gi)) continue;
 
+            if (key == 'contest-memory-ribbon' && GetNameWithForm(pokemonData, true).match(/ditto|unown/gi) && origin > 3) continue;
+
             if (key == 'world-ability-ribbon') {
                 ribbons.possible.push(ribbon.names.eng);
                 continue;
