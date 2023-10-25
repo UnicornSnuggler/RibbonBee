@@ -10,7 +10,7 @@ exports.BuildRibbonImageUri = function(name) {
     return `${RIBBON_IMAGE_URI}${name}${RIBBON_IMAGE_FILE_EXTENSION}`;
 }
 
-exports.GetEligibleRibbons = function(pokemonData, origin) { 
+exports.GetEligibleRibbons = function(pokemonData, origin, emojis = false) { 
     let ribbons = {
         guaranteed: [],
         possible: [],
@@ -20,9 +20,10 @@ exports.GetEligibleRibbons = function(pokemonData, origin) {
     let applicableGames = FilterGamesList(pokemonData, origin);
 
     for (let key of Object.keys(ALL_RIBBONS)) {
-        if (['battle-memory-ribbon-gold', 'contest-memory-ribbon-gold', 'jumbo-mark'].includes(key)) continue;
+        if (['battle-memory-ribbon', 'contest-memory-ribbon', 'jumbo-mark'].includes(key)) continue;
 
         let ribbon = ALL_RIBBONS[key];
+        let output = emojis ? ribbon.emoji : ribbon.names.eng;
 
         if (applicableGames.some(game => ribbon.available?.includes(game))) {
             if (pokemonData.flags?.includes('restricted')) {
@@ -31,24 +32,29 @@ exports.GetEligibleRibbons = function(pokemonData, origin) {
                 else if (key == 'master-rank-ribbon' && (pokemonData.mythical || !pokemonData.games.some(game => ['sw', 'sh'].includes(game)))) continue;
             }
             
-            if (['battle-memory-ribbon', 'contest-memory-ribbon'].includes(key) && origin >= 5) continue;
+            if (['battle-memory-ribbon-gold', 'contest-memory-ribbon-gold'].includes(key) && origin >= 5) continue;
             
             if (CONTEST_RIBBONS.includes(key) && GetNameWithForm(pokemonData, true).match(/ditto|unown/gi)) continue;
 
-            if (key == 'contest-memory-ribbon' && GetNameWithForm(pokemonData, true).match(/ditto|unown/gi) && origin > 3) continue;
+            if (key == 'contest-memory-ribbon-gold' && GetNameWithForm(pokemonData, true).match(/ditto|unown/gi)) {
+                if (origin > 3) continue;
+                
+                ribbons.guaranteed.push(emojis ? ALL_RIBBONS['contest-memory-ribbon'].emoji : ALL_RIBBONS['contest-memory-ribbon'].names.eng);
+                continue;
+            }
 
             if (key == 'world-ability-ribbon') {
-                ribbons.possible.push(ribbon.names.eng);
+                ribbons.possible.push(output);
                 continue;
             }
             
             if (pokemonData.flags?.includes('overFifty') && ['national-ribbon', 'winning-ribbon'].includes(key)) {
-                ribbons.contingent.push(ribbon.names.eng);
+                ribbons.contingent.push(output);
                 continue;
             }
 
             if (pokemonData.flags?.includes('overSeventy') && key == 'footprint-ribbon') {
-                ribbons.possible.push(ribbon.names.eng);
+                ribbons.possible.push(output);
                 continue;
             }
 
@@ -66,7 +72,7 @@ exports.GetEligibleRibbons = function(pokemonData, origin) {
                     prevolutionData = prevolutionData.evolvesFrom ? GetPokemonData(prevolutionData.evolvesFrom) : null;
                 }
 
-                if (canBeShadow) ribbons.possible.push(ribbon.names.eng);
+                if (canBeShadow) ribbons.possible.push(output);
                 
                 continue;
             }
@@ -74,12 +80,12 @@ exports.GetEligibleRibbons = function(pokemonData, origin) {
             if (key == 'mini-mark') {
                 if (pokemonData.flags?.includes('sizeLocked') || !pokemonData.games.some(game => ['scar', 'vio'].includes(game))) continue;
                 else {
-                    ribbons.possible.push(`${ribbon.names.eng}/${ALL_RIBBONS['jumbo-mark'].names.eng}`);
+                    ribbons.possible.push(`${output}/${emojis ? ALL_RIBBONS['jumbo-mark'].emoji : ALL_RIBBONS['jumbo-mark'].names.eng}`);
                     continue;
                 }
             }
 
-            ribbons.guaranteed.push(ribbon.names.eng);
+            ribbons.guaranteed.push(output);
         }
     }
 

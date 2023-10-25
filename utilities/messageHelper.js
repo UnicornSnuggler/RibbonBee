@@ -52,7 +52,7 @@ exports.CreatePokemonEmbed = function(key, pokemonData, origin, prevolutions) {
     return embed;
 }
 
-exports.CreateVerbosePokemonEmbed = function(key, pokemonData, origin) {
+exports.CreateVerbosePokemonEmbed = function(key, pokemonData, origin, emojis) {
     let embed = new EmbedBuilder();
     
     embed.setColor(COLORS.Default);
@@ -61,12 +61,15 @@ exports.CreateVerbosePokemonEmbed = function(key, pokemonData, origin) {
     embed.setThumbnail(BuildSpriteUri(key));
     embed.setFooter({ text: FOOTER, iconURL: FAVICON_URI });
 
-    let eligibleRibbons = GetEligibleRibbons(pokemonData, origin ?? FindEarliestGen(pokemonData));
-    let description = '';
+    let eligibleRibbons = GetEligibleRibbons(pokemonData, origin ?? FindEarliestGen(pokemonData), emojis);
+    
+    let formatting = emojis ? '' : '```';
+    let delimiter = emojis ? ' ' : ', ';
+    let breaks = emojis ? '\n\n' : '\n';
 
-    if (eligibleRibbons.guaranteed.length) description += `**Guaranteed Ribbons**\n\`\`\`${eligibleRibbons.guaranteed.join(', ')}\`\`\``;
-    if (eligibleRibbons.possible.length) description += `\n**Possible Ribbons**\n\`\`\`${eligibleRibbons.possible.join(', ')}\`\`\``;
-    if (eligibleRibbons.contingent.length) description += `\n**Contingent Ribbons**\n\`\`\`${eligibleRibbons.contingent.join(', ')}\`\`\``;
+    let description = `**${eligibleRibbons.guaranteed.length} Guaranteed Ribbon${eligibleRibbons.guaranteed.length > 1 ? 's' : ''}**\n${formatting}${eligibleRibbons.guaranteed.join(delimiter)}${formatting}`;
+    if (eligibleRibbons.possible.length) description += `${breaks}**${eligibleRibbons.possible.length} Possible Ribbon${eligibleRibbons.possible.length > 1 ? 's' : ''}**\n${formatting}${eligibleRibbons.possible.join(delimiter)}${formatting}`;
+    if (eligibleRibbons.contingent.length) description += `${breaks}**${eligibleRibbons.contingent.length / 2} Contingent Ribbon${eligibleRibbons.contingent.length > 1 ? 's' : ''}**\n${formatting}${eligibleRibbons.contingent.join(delimiter)}${formatting}`;
 
     embed.setDescription(description);
 

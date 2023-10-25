@@ -11,6 +11,7 @@ exports.RIBBON_IDS = {
 exports.ALL_RIBBONS = {
 	"champion-ribbon": {
 		"gen": 3,
+		"emoji": "<:championribbon:1166588442092773460>",
 		"available": [
 			"ruby",
 			"sapphire",
@@ -54,6 +55,7 @@ exports.ALL_RIBBONS = {
 	},
 	"sinnoh-champion-ribbon": {
 		"gen": 4,
+		"emoji": "<:sinnohchampionribbon:1166599453420036166>",
 		"available": [
 			"diamond",
 			"pearl",
@@ -97,6 +99,7 @@ exports.ALL_RIBBONS = {
 	},
 	"kalos-champion-ribbon": {
 		"gen": 6,
+		"emoji": "<:kaloschampionribbon:1166598057568243743>",
 		"available": [
 			"x",
 			"y"
@@ -137,6 +140,7 @@ exports.ALL_RIBBONS = {
 	},
 	"hoenn-champion-ribbon": {
 		"gen": 6,
+		"emoji": "<:hoennchampionribbon:1166598048026202152>",
 		"available": [
 			"or",
 			"as"
@@ -177,6 +181,7 @@ exports.ALL_RIBBONS = {
 	},
 	"alola-champion-ribbon": {
 		"gen": 7,
+		"emoji": "<:alolachampionribbon:1166586412154499082>",
 		"available": [
 			"sun",
 			"moon",
@@ -219,6 +224,7 @@ exports.ALL_RIBBONS = {
 	},
 	"galar-champion-ribbon": {
 		"gen": 8,
+		"emoji": "<:galarchampionribbon:1166598725913804831>",
 		"available": [
 			"sw",
 			"sh"
@@ -259,6 +265,7 @@ exports.ALL_RIBBONS = {
 	},
 	"paldea-champion-ribbon": {
 		"gen": 8,
+		"emoji": "<:paldeachampionribbon:1166599447686434888>",
 		"available": [
 			"scar",
 			"vio"
@@ -299,6 +306,7 @@ exports.ALL_RIBBONS = {
 	},
 	"cool-ribbon-hoenn": {
 		"gen": 3,
+		"emoji": "<:coolribbonhoenn:1166586441636249640>",
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -316,6 +324,7 @@ exports.ALL_RIBBONS = {
 	},
 	"cool-ribbon-super-hoenn": {
 		"gen": 3,
+		"emoji": "<:coolribbonsuperhoenn:1166588752676794409>",
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -333,6 +342,7 @@ exports.ALL_RIBBONS = {
 	},
 	"cool-ribbon-hyper-hoenn": {
 		"gen": 3,
+		"emoji": "<:coolribbonhyperhoenn:1166588749652705381>",
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -350,6 +360,7 @@ exports.ALL_RIBBONS = {
 	},
 	"cool-ribbon-master-hoenn": {
 		"gen": 3,
+		"emoji": "<:coolribbonmasterhoenn:1166588750239891519>",
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -367,6 +378,7 @@ exports.ALL_RIBBONS = {
 	},
 	"beauty-ribbon-hoenn": {
 		"gen": 3,
+		"emoji": "<:beautyribbonhoenn:1166587740285050880>",
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -384,6 +396,7 @@ exports.ALL_RIBBONS = {
 	},
 	"beauty-ribbon-super-hoenn": {
 		"gen": 3,
+		"emoji": "<:beautyribbonsuperhoenn:1166588093298643025>",
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -401,6 +414,7 @@ exports.ALL_RIBBONS = {
 	},
 	"beauty-ribbon-hyper-hoenn": {
 		"gen": 3,
+		"emoji": "<:beautyribbonhyperhoenn:1166587786183331970>",
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -418,6 +432,7 @@ exports.ALL_RIBBONS = {
 	},
 	"beauty-ribbon-master-hoenn": {
 		"gen": 3,
+		"emoji": "<:beautyribbonmasterhoenn:1166586423667851405>",
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -435,6 +450,7 @@ exports.ALL_RIBBONS = {
 	},
 	"cute-ribbon-hoenn": {
 		"gen": 3,
+		"emoji": "<:cuteribbonhoenn:1166589022244704317>",
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -452,6 +468,7 @@ exports.ALL_RIBBONS = {
 	},
 	"cute-ribbon-super-hoenn": {
 		"gen": 3,
+		"emoji": "<:cuteribbonsuperhoenn:1166589027147857982>",
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -469,6 +486,7 @@ exports.ALL_RIBBONS = {
 	},
 	"cute-ribbon-hyper-hoenn": {
 		"gen": 3,
+		"emoji": "<:cuteribbonhyperhoenn:1166586452239462410>",
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -486,6 +504,7 @@ exports.ALL_RIBBONS = {
 	},
 	"cute-ribbon-master-hoenn": {
 		"gen": 3,
+		"emoji": "<:cuteribbonmasterhoenn:1166589023700144149>",
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -503,6 +522,7 @@ exports.ALL_RIBBONS = {
 	},
 	"smart-ribbon-hoenn": {
 		"gen": 3,
+		"emoji": "<:smartribbonhoenn:1166600057127182346>",
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -520,6 +540,7 @@ exports.ALL_RIBBONS = {
 	},
 	"smart-ribbon-super-hoenn": {
 		"gen": 3,
+		"emoji": "<:smartribbonsuperhoenn:1166600069299052624>",
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -537,6 +558,7 @@ exports.ALL_RIBBONS = {
 	},
 	"smart-ribbon-hyper-hoenn": {
 		"gen": 3,
+		"emoji": "<:smartribbonhyperhoenn:1166600058481946634>",
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -554,6 +576,7 @@ exports.ALL_RIBBONS = {
 	},
 	"smart-ribbon-master-hoenn": {
 		"gen": 3,
+		"emoji": "<:smartribbonmasterhoenn:1166600059383726210>",
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -571,6 +594,7 @@ exports.ALL_RIBBONS = {
 	},
 	"tough-ribbon-hoenn": {
 		"gen": 3,
+		"emoji": "<:toughribbonhoenn:1166600593364766750>",
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -588,6 +612,7 @@ exports.ALL_RIBBONS = {
 	},
 	"tough-ribbon-super-hoenn": {
 		"gen": 3,
+		"emoji": "<:toughribbonsuperhoenn:1166600607122075658>",
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -605,6 +630,7 @@ exports.ALL_RIBBONS = {
 	},
 	"tough-ribbon-hyper-hoenn": {
 		"gen": 3,
+		"emoji": "<:toughribbonhyperhoenn:1166600595688407050>",
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -622,6 +648,7 @@ exports.ALL_RIBBONS = {
 	},
 	"tough-ribbon-master-hoenn": {
 		"gen": 3,
+		"emoji": "<:toughribbonmasterhoenn:1166600597319983154>",
 		"merge": "contest",
 		"available": [
 			"ruby",
@@ -639,6 +666,7 @@ exports.ALL_RIBBONS = {
 	},
 	"cool-ribbon-sinnoh": {
 		"gen": 4,
+		"emoji": "<:coolribbonsinnoh:1166586444333195335>",
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -656,6 +684,7 @@ exports.ALL_RIBBONS = {
 	},
 	"cool-ribbon-great-sinnoh": {
 		"gen": 4,
+		"emoji": "<:coolribbongreatsinnoh:1166588747207417857>",
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -673,6 +702,7 @@ exports.ALL_RIBBONS = {
 	},
 	"cool-ribbon-ultra-sinnoh": {
 		"gen": 4,
+		"emoji": "<:coolribbonultrasinnoh:1166588754417418320>",
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -690,6 +720,7 @@ exports.ALL_RIBBONS = {
 	},
 	"cool-ribbon-master-sinnoh": {
 		"gen": 4,
+		"emoji": "<:coolribbonmastersinnoh:1166588751544328222>",
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -707,6 +738,7 @@ exports.ALL_RIBBONS = {
 	},
 	"beauty-ribbon-sinnoh": {
 		"gen": 4,
+		"emoji": "<:beautyribbonsinnoh:1166586427581157417>",
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -724,6 +756,7 @@ exports.ALL_RIBBONS = {
 	},
 	"beauty-ribbon-great-sinnoh": {
 		"gen": 4,
+		"emoji": "<:beautyribbongreatsinnoh:1166587657514668043>",
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -741,6 +774,7 @@ exports.ALL_RIBBONS = {
 	},
 	"beauty-ribbon-ultra-sinnoh": {
 		"gen": 4,
+		"emoji": "<:beautyribbonultrasinnoh:1166588142342651944>",
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -758,6 +792,7 @@ exports.ALL_RIBBONS = {
 	},
 	"beauty-ribbon-master-sinnoh": {
 		"gen": 4,
+		"emoji": "<:beautyribbonmastersinnoh:1166587894102765668>",
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -775,6 +810,7 @@ exports.ALL_RIBBONS = {
 	},
 	"cute-ribbon-sinnoh": {
 		"gen": 4,
+		"emoji": "<:cuteribbonsinnoh:1166589026069925958>",
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -792,6 +828,7 @@ exports.ALL_RIBBONS = {
 	},
 	"cute-ribbon-great-sinnoh": {
 		"gen": 4,
+		"emoji": "<:cuteribbongreatsinnoh:1166586447919321128>",
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -809,6 +846,7 @@ exports.ALL_RIBBONS = {
 	},
 	"cute-ribbon-ultra-sinnoh": {
 		"gen": 4,
+		"emoji": "<:cuteribbonultrasinnoh:1166586454948970516>",
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -826,6 +864,7 @@ exports.ALL_RIBBONS = {
 	},
 	"cute-ribbon-master-sinnoh": {
 		"gen": 4,
+		"emoji": "<:cuteribbonmastersinnoh:1166589024958418956>",
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -843,6 +882,7 @@ exports.ALL_RIBBONS = {
 	},
 	"smart-ribbon-sinnoh": {
 		"gen": 4,
+		"emoji": "<:smartribbonsinnoh:1166600062076457061>",
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -860,6 +900,7 @@ exports.ALL_RIBBONS = {
 	},
 	"smart-ribbon-great-sinnoh": {
 		"gen": 4,
+		"emoji": "<:smartribbongreatsinnoh:1166600055449456672>",
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -877,6 +918,7 @@ exports.ALL_RIBBONS = {
 	},
 	"smart-ribbon-ultra-sinnoh": {
 		"gen": 4,
+		"emoji": "<:smartribbonultrasinnoh:1166600071442337809>",
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -894,6 +936,7 @@ exports.ALL_RIBBONS = {
 	},
 	"smart-ribbon-master-sinnoh": {
 		"gen": 4,
+		"emoji": "<:smartribbonmastersinnoh:1166600060314857572>",
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -911,6 +954,7 @@ exports.ALL_RIBBONS = {
 	},
 	"tough-ribbon-sinnoh": {
 		"gen": 4,
+		"emoji": "<:toughribbonsinnoh:1166600599853355118>",
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -928,6 +972,7 @@ exports.ALL_RIBBONS = {
 	},
 	"tough-ribbon-great-sinnoh": {
 		"gen": 4,
+		"emoji": "<:toughribbongreatsinnoh:1166600591452143616>",
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -945,6 +990,7 @@ exports.ALL_RIBBONS = {
 	},
 	"tough-ribbon-ultra-sinnoh": {
 		"gen": 4,
+		"emoji": "<:toughribbonultrasinnoh:1166600608996917248>",
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -962,6 +1008,7 @@ exports.ALL_RIBBONS = {
 	},
 	"tough-ribbon-master-sinnoh": {
 		"gen": 4,
+		"emoji": "<:toughribbonmastersinnoh:1166600598653767690>",
 		"merge": "contest",
 		"available": [
 			"diamond",
@@ -979,6 +1026,7 @@ exports.ALL_RIBBONS = {
 	},
 	"coolness-master-ribbon": {
 		"gen": 6,
+		"emoji": "<:coolnessmasterribbon:1166586438498918440>",
 		"available": [
 			"or",
 			"as",
@@ -1021,6 +1069,7 @@ exports.ALL_RIBBONS = {
 	},
 	"beauty-master-ribbon": {
 		"gen": 6,
+		"emoji": "<:beautymasterribbon:1166587567412621413>",
 		"available": [
 			"or",
 			"as",
@@ -1063,6 +1112,7 @@ exports.ALL_RIBBONS = {
 	},
 	"cuteness-master-ribbon": {
 		"gen": 6,
+		"emoji": "<:cutenessmasterribbon:1166588891189497916>",
 		"available": [
 			"or",
 			"as",
@@ -1105,6 +1155,7 @@ exports.ALL_RIBBONS = {
 	},
 	"cleverness-master-ribbon": {
 		"gen": 6,
+		"emoji": "<:clevernessmasterribbon:1166588478692274246>",
 		"available": [
 			"or",
 			"as",
@@ -1147,6 +1198,7 @@ exports.ALL_RIBBONS = {
 	},
 	"toughness-master-ribbon": {
 		"gen": 6,
+		"emoji": "<:toughnessmasterribbon:1166601141098909747>",
 		"available": [
 			"or",
 			"as",
@@ -1189,6 +1241,7 @@ exports.ALL_RIBBONS = {
 	},
 	"contest-star-ribbon": {
 		"gen": 6,
+		"emoji": "<:conteststarribbon:1166588614159892522>",
 		"available": [
 			"or",
 			"as",
@@ -1231,6 +1284,7 @@ exports.ALL_RIBBONS = {
 	},
 	"twinkling-star-ribbon": {
 		"gen": 8,
+		"emoji": "<:twinklingstarribbon:1166601777999777864>",
 		"available": [
 			"bd",
 			"sp"
@@ -1271,6 +1325,7 @@ exports.ALL_RIBBONS = {
 	},
 	"contest-memory-ribbon": {
 		"gen": 6,
+		"emoji": "<:contestmemoryribbon:1166588546417709207>",
 		"optional": true,
 		"available": [
 			"x",
@@ -1314,6 +1369,7 @@ exports.ALL_RIBBONS = {
 	},
 	"contest-memory-ribbon-gold": {
 		"gen": 6,
+		"emoji": "<:contestmemoryribbongold:1166586434736627792>",
 		"optional": true,
 		"available": [
 			"x",
@@ -1357,6 +1413,7 @@ exports.ALL_RIBBONS = {
 	},
 	"winning-ribbon": {
 		"gen": 3,
+		"emoji": "<:winningribbon:1166601780583465001>",
 		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza"],
 		"nomythical": true,
 		"merge": "battle",
@@ -1376,6 +1433,7 @@ exports.ALL_RIBBONS = {
 	},
 	"victory-ribbon": {
 		"gen": 3,
+		"emoji": "<:victoryribbon:1166601779270651966>",
 		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza"],
 		"nomythical": true,
 		"merge": "battle",
@@ -1395,6 +1453,7 @@ exports.ALL_RIBBONS = {
 	},
 	"ability-ribbon": {
 		"gen": 4,
+		"emoji": "<:abilityribbon:1166586409444986950>",
 		"banned": ["mewtwo", "pichu-spiky-eared", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina"],
 		"nomythical": true,
 		"merge": "battle",
@@ -1416,6 +1475,7 @@ exports.ALL_RIBBONS = {
 	},
 	"great-ability-ribbon": {
 		"gen": 4,
+		"emoji": "<:greatabilityribbon:1166598013511282759>",
 		"banned": ["mewtwo", "pichu-spiky-eared", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina"],
 		"nomythical": true,
 		"merge": "battle",
@@ -1437,6 +1497,7 @@ exports.ALL_RIBBONS = {
 	},
 	"double-ability-ribbon": {
 		"gen": 4,
+		"emoji": "<:doubleabilityribbon:1166589178285404181>",
 		"banned": ["mewtwo", "pichu-spiky-eared", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina"],
 		"nomythical": true,
 		"merge": "battle",
@@ -1458,6 +1519,7 @@ exports.ALL_RIBBONS = {
 	},
 	"multi-ability-ribbon": {
 		"gen": 4,
+		"emoji": "<:multiabilityribbon:1166598729437036675>",
 		"banned": ["mewtwo", "pichu-spiky-eared", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina"],
 		"nomythical": true,
 		"merge": "battle",
@@ -1479,6 +1541,7 @@ exports.ALL_RIBBONS = {
 	},
 	"pair-ability-ribbon": {
 		"gen": 4,
+		"emoji": "<:pairabilityribbon:1166599445970952212>",
 		"banned": ["mewtwo", "pichu-spiky-eared", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina"],
 		"nomythical": true,
 		"merge": "battle",
@@ -1500,6 +1563,7 @@ exports.ALL_RIBBONS = {
 	},
 	"world-ability-ribbon": {
 		"optional": true,
+		"emoji": "<:worldabilityribbon:1166601781581709403>",
 		"banned": ["mewtwo", "pichu-spiky-eared", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina"],
 		"nomythical": true,
 		"merge": "battle",
@@ -1522,6 +1586,7 @@ exports.ALL_RIBBONS = {
 	},
 	"battle-memory-ribbon": {
 		"gen": 6,
+		"emoji": "<:battlememoryribbon:1166586415186976840>",
 		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina"],
 		"nomythical": true,
 		"optional": true,
@@ -1567,6 +1632,7 @@ exports.ALL_RIBBONS = {
 	},
 	"battle-memory-ribbon-gold": {
 		"gen": 6,
+		"emoji": "<:battlememoryribbongold:1166586416021647401>",
 		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina"],
 		"nomythical": true,
 		"optional": true,
@@ -1612,6 +1678,7 @@ exports.ALL_RIBBONS = {
 	},
 	"skillful-battler-ribbon": {
 		"gen": 6,
+		"emoji": "<:skillfulbattlerribbon:1166601137479241728>",
 		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina", "reshiram", "zekrom", "kyurem", "xerneas", "yveltal", "zygarde"],
 		"nomythical": true,
 		"available": [
@@ -1656,6 +1723,7 @@ exports.ALL_RIBBONS = {
 	},
 	"expert-battler-ribbon": {
 		"gen": 6,
+		"emoji": "<:expertbattlerribbon:1166589309634232390>",
 		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina", "reshiram", "zekrom", "kyurem", "xerneas", "yveltal", "zygarde"],
 		"nomythical": true,
 		"available": [
@@ -1698,8 +1766,54 @@ exports.ALL_RIBBONS = {
 			"chs": "高手"
 		}
 	},
+	"battle-royal-master-ribbon": {
+		"gen": 7,
+		"emoji": "<:battleroyalmasterribbon:1166586417904881744>",
+		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina", "reshiram", "zekrom", "kyurem", "xerneas", "yveltal", "zygarde", "cosmog", "cosmoem", "solgaleo", "lunala", "necrozma"],
+		"nomythical": true,
+		"available": [
+			"sun",
+			"moon",
+			"usun",
+			"umoon"
+		],
+		"names": {
+			"ger": "Battle-Royale-Meisterband",
+			"eng": "Battle Royal Master Ribbon",
+			"spa": "Cinta Maestro Battle Royale",
+			"fre": "Ruban Champion Royal",
+			"ita": "Fiocco Asso Royale",
+			"jpn": "ロイヤルマスターリボン",
+			"kor": "로열마스터리본",
+			"cht": "皇家大師獎章",
+			"chs": "皇家大师奖章"
+		},
+		"descs": {
+			"ger": "Band zur Auszeichnung eines Pokémon, das beim Battle Royale gesiegt hat.",
+			"eng": "A Ribbon that can be given to a Pokémon that has achieved victory in the Battle Royal.",
+			"spa": "Cinta que se concede a un Pokémon por resultar vencedor en un Battle Royale.",
+			"fre": "Ruban offert à un Pokémon étant sorti grand vainqueur de la Bataille Royale.",
+			"ita": "Fiocco conferito per le vittorie nelle Battle Royale.",
+			"jpn": "バトルロイヤルで　勝ち抜いた ポケモンに　贈られる　記念リボン",
+			"kor": "배틀로열을 이겨 낸 포켓몬에게 수여되는 기념리본",
+			"cht": "贈予在皇家對戰中勝出的 寶可夢的紀念獎章。",
+			"chs": "赠予在皇家对战中胜出的 宝可梦的纪念奖章。"
+		},
+		"titles": {
+			"ger": "Battle-Royale-Meister",
+			"eng": "the Royal Master",
+			"spa": "el Maestro del Battle Royale",
+			"fre": "le Champion Royal",
+			"ita": "asso Royale",
+			"jpn": "ロイヤルマスター",
+			"kor": "로열 마스터",
+			"cht": "皇家大師",
+			"chs": "皇家大师"
+		}
+	},
 	"battle-tree-great-ribbon": {
 		"gen": 7,
+		"emoji": "<:battletreegreatribbon:1166587495048290374>",
 		"available": [
 			"sun",
 			"moon",
@@ -1742,6 +1856,7 @@ exports.ALL_RIBBONS = {
 	},
 	"battle-tree-master-ribbon": {
 		"gen": 7,
+		"emoji": "<:battletreemasterribbon:1166586420794769468>",
 		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina", "reshiram", "zekrom", "kyurem", "xerneas", "yveltal", "zygarde", "cosmog", "cosmoem", "solgaleo", "lunala", "necrozma"],
 		"nomythical": true,
 		"available": [
@@ -1786,6 +1901,7 @@ exports.ALL_RIBBONS = {
 	},
 	"tower-master-ribbon": {
 		"gen": 8,
+		"emoji": "<:towermasterribbon:1166601142466252840>",
 		"available": [
 			"sw",
 			"sh",
@@ -1828,6 +1944,7 @@ exports.ALL_RIBBONS = {
 	},
 	"artist-ribbon": {
 		"gen": 3,
+		"emoji": "<:artistribbon:1166586413047873617>",
 		"available": [
 			"ruby",
 			"sapphire",
@@ -1869,6 +1986,7 @@ exports.ALL_RIBBONS = {
 	},
 	"effort-ribbon": {
 		"gen": 3,
+		"emoji": "<:effortribbon:1166589282769711214>",
 		"available": [
 			"ruby",
 			"sapphire",
@@ -1929,6 +2047,7 @@ exports.ALL_RIBBONS = {
 	},
 	"alert-ribbon": {
 		"gen": 4,
+		"emoji": "<:alertribbon:1166586410896207882>",
 		"available": [
 			"diamond",
 			"pearl",
@@ -1978,6 +2097,7 @@ exports.ALL_RIBBONS = {
 	},
 	"shock-ribbon": {
 		"gen": 4,
+		"emoji": "<:shockribbon:1166599451985580062>",
 		"available": [
 			"diamond",
 			"pearl",
@@ -2027,6 +2147,7 @@ exports.ALL_RIBBONS = {
 	},
 	"downcast-ribbon": {
 		"gen": 4,
+		"emoji": "<:downcastribbon:1166589210841587803>",
 		"available": [
 			"diamond",
 			"pearl",
@@ -2076,6 +2197,7 @@ exports.ALL_RIBBONS = {
 	},
 	"careless-ribbon": {
 		"gen": 4,
+		"emoji": "<:carelessribbon:1166588377102041118>",
 		"available": [
 			"diamond",
 			"pearl",
@@ -2125,6 +2247,7 @@ exports.ALL_RIBBONS = {
 	},
 	"relax-ribbon": {
 		"gen": 4,
+		"emoji": "<:relaxribbon:1166599449297027142>",
 		"available": [
 			"diamond",
 			"pearl",
@@ -2174,6 +2297,7 @@ exports.ALL_RIBBONS = {
 	},
 	"snooze-ribbon": {
 		"gen": 4,
+		"emoji": "<:snoozeribbon:1166601140243279953>",
 		"available": [
 			"diamond",
 			"pearl",
@@ -2223,6 +2347,7 @@ exports.ALL_RIBBONS = {
 	},
 	"smile-ribbon": {
 		"gen": 4,
+		"emoji": "<:smileribbon:1166601139102437456>",
 		"available": [
 			"diamond",
 			"pearl",
@@ -2272,6 +2397,7 @@ exports.ALL_RIBBONS = {
 	},
 	"gorgeous-ribbon": {
 		"gen": 4,
+		"emoji": "<:gorgeousribbon:1166597662825533440>",
 		"available": [
 			"diamond",
 			"pearl",
@@ -2318,6 +2444,7 @@ exports.ALL_RIBBONS = {
 	},
 	"royal-ribbon": {
 		"gen": 4,
+		"emoji": "<:royalribbon:1166599450345623583>",
 		"available": [
 			"diamond",
 			"pearl",
@@ -2363,6 +2490,7 @@ exports.ALL_RIBBONS = {
 	},
 	"gorgeous-royal-ribbon": {
 		"gen": 4,
+		"emoji": "<:gorgeousroyalribbon:1166597690600202300>",
 		"available": [
 			"diamond",
 			"pearl",
@@ -2408,6 +2536,7 @@ exports.ALL_RIBBONS = {
 	},
 	"footprint-ribbon": {
 		"gen": 4,
+		"emoji": "<:footprintribbon:1166598724454207508>",
 		"available": [
 			"diamond",
 			"pearl",
@@ -2459,6 +2588,7 @@ exports.ALL_RIBBONS = {
 	},
 	"legend-ribbon": {
 		"gen": 4,
+		"emoji": "<:legendribbon:1166598726941413466>",
 		"available": [
 			"hg",
 			"ss"
@@ -2499,6 +2629,7 @@ exports.ALL_RIBBONS = {
 	},
 	"best-friends-ribbon": {
 		"gen": 6,
+		"emoji": "<:bestfriendsribbon:1166588287813681263>",
 		"available": [
 			"x",
 			"y",
@@ -2551,6 +2682,7 @@ exports.ALL_RIBBONS = {
 	},
 	"training-ribbon": {
 		"gen": 6,
+		"emoji": "<:trainingribbon:1166601144571805778>",
 		"available": [
 			"x",
 			"y",
@@ -2591,52 +2723,9 @@ exports.ALL_RIBBONS = {
 			"chs": "一起接受过试练的"
 		}
 	},
-	"battle-royal-master-ribbon": {
-		"gen": 7,
-		"banned": ["mewtwo", "lugia", "ho-oh", "kyogre", "groudon", "rayquaza", "dialga", "palkia", "giratina", "reshiram", "zekrom", "kyurem", "xerneas", "yveltal", "zygarde", "cosmog", "cosmoem", "solgaleo", "lunala", "necrozma"],
-		"nomythical": true,
-		"available": [
-			"sun",
-			"moon",
-			"usun",
-			"umoon"
-		],
-		"names": {
-			"ger": "Battle-Royale-Meisterband",
-			"eng": "Battle Royal Master Ribbon",
-			"spa": "Cinta Maestro Battle Royale",
-			"fre": "Ruban Champion Royal",
-			"ita": "Fiocco Asso Royale",
-			"jpn": "ロイヤルマスターリボン",
-			"kor": "로열마스터리본",
-			"cht": "皇家大師獎章",
-			"chs": "皇家大师奖章"
-		},
-		"descs": {
-			"ger": "Band zur Auszeichnung eines Pokémon, das beim Battle Royale gesiegt hat.",
-			"eng": "A Ribbon that can be given to a Pokémon that has achieved victory in the Battle Royal.",
-			"spa": "Cinta que se concede a un Pokémon por resultar vencedor en un Battle Royale.",
-			"fre": "Ruban offert à un Pokémon étant sorti grand vainqueur de la Bataille Royale.",
-			"ita": "Fiocco conferito per le vittorie nelle Battle Royale.",
-			"jpn": "バトルロイヤルで　勝ち抜いた ポケモンに　贈られる　記念リボン",
-			"kor": "배틀로열을 이겨 낸 포켓몬에게 수여되는 기념리본",
-			"cht": "贈予在皇家對戰中勝出的 寶可夢的紀念獎章。",
-			"chs": "赠予在皇家对战中胜出的 宝可梦的纪念奖章。"
-		},
-		"titles": {
-			"ger": "Battle-Royale-Meister",
-			"eng": "the Royal Master",
-			"spa": "el Maestro del Battle Royale",
-			"fre": "le Champion Royal",
-			"ita": "asso Royale",
-			"jpn": "ロイヤルマスター",
-			"kor": "로열 마스터",
-			"cht": "皇家大師",
-			"chs": "皇家大师"
-		}
-	},
 	"master-rank-ribbon": {
 		"gen": 8,
+		"emoji": "<:masterrankribbon:1166598728283598858>",
 		"nomythical": true,
 		"available": [
 			"sw",
@@ -2680,6 +2769,7 @@ exports.ALL_RIBBONS = {
 	},
 	"hisui-ribbon": {
 		"gen": 8,
+		"emoji": "<:hisuiribbon:1166598026429739078>",
 		"available": [
 			"pla"
 		],
@@ -2757,6 +2847,7 @@ exports.ALL_RIBBONS = {
 	"national-ribbon": {
 		"optional": true,
 		"gen": 3,
+		"emoji": "<:nationalribbon:1166598731039248436>",
 		"available": [
 			"colosseum",
 			"xd"
@@ -2797,6 +2888,7 @@ exports.ALL_RIBBONS = {
 	},
 	"earth-ribbon": {
 		"gen": 3,
+		"emoji": "<:earthribbon:1166589253816422460>",
 		"available": [
 			"colosseum",
 			"xd"
@@ -4919,6 +5011,7 @@ exports.ALL_RIBBONS = {
 	"jumbo-mark": {
 		"optional": true,
 		"gen": 8,
+		"emoji": "<:jumbomark:1166602450397036624>",
 		"available": [
 			"scar",
 			"vio"
@@ -4961,6 +5054,7 @@ exports.ALL_RIBBONS = {
 	"mini-mark": {
 		"optional": true,
 		"gen": 8,
+		"emoji": "<:minimark:1166602452796198932>",
 		"available": [
 			"scar",
 			"vio"
@@ -5002,6 +5096,7 @@ exports.ALL_RIBBONS = {
 	},
 	"itemfinder-mark": {
 		"gen": 8,
+		"emoji": "<:itemfindermark:1166602448106954784>",
 		"available": [
 			"scar",
 			"vio"
@@ -5043,6 +5138,7 @@ exports.ALL_RIBBONS = {
 	},
 	"partner-mark": {
 		"gen": 8,
+		"emoji": "<:partnermark:1166602855998820382>",
 		"available": [
 			"scar",
 			"vio"
@@ -5084,6 +5180,7 @@ exports.ALL_RIBBONS = {
 	},
 	"gourmand-mark": {
 		"gen": 8,
+		"emoji": "<:gourmandmark:1166602446513123388>",
 		"available": [
 			"scar",
 			"vio"

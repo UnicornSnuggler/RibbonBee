@@ -32,10 +32,14 @@ module.exports = {
             option
                 .setName('show-prevolutions')
                 .setDescription('Include data pertaining to the prospective Pokémon\'s prevolutions.'))
-        .addBooleanOption(option =>
+        .addIntegerOption(option =>
             option
                 .setName('verbose')
-                .setDescription('Include a detailed breakdown of attainable ribbons by game.')),
+                .setDescription('Include a detailed breakdown of attainable ribbons by game.')
+                .addChoices(
+                    { name: 'Textual', value: 1 },
+                    { name: 'Graphical', value: 2 }
+                )),
     async execute(interaction) {        
         try {
             let nameOption = interaction.options.getString('name');
@@ -44,7 +48,7 @@ module.exports = {
             let origin = interaction.options.getInteger('origin');
 
             let prevolutions = interaction.options.getBoolean('show-prevolutions') ?? false;
-            let verbose = interaction.options.getBoolean('verbose') ?? false;
+            let verbose = interaction.options.getInteger('verbose') ?? 0;
 
             let pokemonData = GetPokemonData(searchResult);
 
@@ -54,7 +58,7 @@ module.exports = {
                 else {
                     let ephemeral = interaction.guildId ? !SPAM_CHANNELS.includes(interaction.channelId) : false;
 
-                    SendMessageWithOptions(interaction, { embeds: [CreateVerbosePokemonEmbed(searchResult, pokemonData, origin)] }, ephemeral);
+                    SendMessageWithOptions(interaction, { embeds: [CreateVerbosePokemonEmbed(searchResult, pokemonData, origin, verbose == 2)] }, ephemeral);
                 }
             }
         }
