@@ -39,7 +39,8 @@ exports.RESTRICTED_RIBBONS = [
     'battle-memory-ribbon-gold',
     'skillful-battler-ribbon',
     'expert-battler-ribbon',
-    'battle-royal-master-ribbon'
+    'battle-royal-master-ribbon',
+    'battle-tree-master-ribbon'
 ];
 
 exports.CONTEST_RIBBONS = [
