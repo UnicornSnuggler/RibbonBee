@@ -41420,7 +41420,8 @@ exports.POKEMON = {
 		"games": [
 			"scar",
 			"vio"
-		]
+		],
+		"evolvesFrom": "duraludon"
 	},
 	"hydrapple": {
 		"names": {
