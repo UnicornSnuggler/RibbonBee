@@ -24146,6 +24146,9 @@ exports.POKEMON = {
 		"games": [
 			"hg",
 			"ss"
+		],
+		"flags": [
+			"restricted"
 		]
 	},
 	"pichu": {
