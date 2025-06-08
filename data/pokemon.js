@@ -9146,7 +9146,6 @@ exports.POKEMON = {
 			"as",
 			"lgp",
 			"lge",
-			"pla",
 			"sun",
 			"moon",
 			"usun",
@@ -12645,7 +12644,6 @@ exports.POKEMON = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla",
 			"scar",
 			"vio"
 		],
@@ -13466,7 +13464,6 @@ exports.POKEMON = {
 			"lge",
 			"sw",
 			"sh",
-			"pla",
 			"colosseum",
 			"xd",
 			"scar",
@@ -17742,7 +17739,6 @@ exports.POKEMON = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla",
 			"scar",
 			"vio"
 		],
@@ -24146,9 +24142,6 @@ exports.POKEMON = {
 		"games": [
 			"hg",
 			"ss"
-		],
-		"flags": [
-			"restricted"
 		]
 	},
 	"pichu": {
@@ -26372,7 +26365,6 @@ exports.POKEMON = {
 			"as",
 			"sw",
 			"sh",
-			"pla",
 			"sun",
 			"moon",
 			"usun",
@@ -28113,7 +28105,6 @@ exports.POKEMON = {
 			"y",
 			"or",
 			"as",
-			"pla",
 			"sun",
 			"moon",
 			"usun",
@@ -30652,7 +30643,6 @@ exports.POKEMON = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla",
 			"scar",
 			"vio"
 		],
@@ -34981,7 +34971,6 @@ exports.POKEMON = {
 			"y",
 			"or",
 			"as",
-			"pla",
 			"sun",
 			"moon",
 			"usun",
@@ -36853,7 +36842,6 @@ exports.POKEMON = {
 			"as",
 			"lgp",
 			"lge",
-			"pla",
 			"sun",
 			"moon",
 			"usun",
@@ -38788,7 +38776,6 @@ exports.POKEMON = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla",
 			"sun",
 			"moon",
 			"scar",
@@ -38832,7 +38819,6 @@ exports.POKEMON = {
 			"umoon",
 			"sw",
 			"sh",
-			"pla",
 			"sun",
 			"moon",
 			"scar",
