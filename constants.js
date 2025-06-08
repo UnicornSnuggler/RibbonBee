@@ -12,13 +12,13 @@ exports.WARNING_EMOJI = ':warning:';
 
 exports.ERROR = 'An unexpected error has occurred... The issue is being investigated!';
 
-exports.FOOTER = 'Powered by data from ribbons.guide';
+exports.FOOTER = 'Powered by data from Ribbons.Guide';
 
 exports.BULBAPEDIA_URI = 'https://bulbapedia.bulbagarden.net/wiki/';
 exports.BULBAPEDIA_SUFFIX = '_(Pok%C3%A9mon)';
 exports.BULBAPEDIA_RIBBONS_URI = 'https://bulbapedia.bulbagarden.net/wiki/List_of_Ribbons_in_the_games';
 
-exports.FAVICON_URI = 'https://raw.githubusercontent.com/Azekthi/Ribbons.Guide/main/img/icons/favicon-32x32.png';
+exports.FAVICON_URI = 'https://raw.githubusercontent.com/Azekthi/Ribbons.Guide/main/img/icons/android-chrome-192x192.png';
 
 exports.RIBBON_IMAGE_URI = 'https://raw.githubusercontent.com/Azekthi/Ribbons.Guide/main/img/ribbons/';
 exports.RIBBON_IMAGE_FILE_EXTENSION = '.png';
@@ -44,26 +44,6 @@ exports.RESTRICTED_RIBBONS = [
 ];
 
 exports.CONTEST_RIBBONS = [
-    // 'cool-ribbon-hoenn',
-    // 'cool-ribbon-super-hoenn',
-    // 'cool-ribbon-hyper-hoenn',
-    // 'cool-ribbon-master-hoenn',
-    // 'beauty-ribbon-hoenn',
-    // 'beauty-ribbon-super-hoenn',
-    // 'beauty-ribbon-hyper-hoenn',
-    // 'beauty-ribbon-master-hoenn',
-    // 'cute-ribbon-hoenn',
-    // 'cute-ribbon-super-hoenn',
-    // 'cute-ribbon-hyper-hoenn',
-    // 'cute-ribbon-master-hoenn',
-    // 'smart-ribbon-hoenn',
-    // 'smart-ribbon-super-hoenn',
-    // 'smart-ribbon-hyper-hoenn',
-    // 'smart-ribbon-master-hoenn',
-    // 'tough-ribbon-hoenn',
-    // 'tough-ribbon-super-hoenn',
-    // 'tough-ribbon-hyper-hoenn',
-    // 'tough-ribbon-master-hoenn',
     'cool-ribbon-sinnoh',
     'cool-ribbon-great-sinnoh',
     'cool-ribbon-ultra-sinnoh',
@@ -83,8 +63,7 @@ exports.CONTEST_RIBBONS = [
     'tough-ribbon-sinnoh',
     'tough-ribbon-great-sinnoh',
     'tough-ribbon-ultra-sinnoh',
-    'tough-ribbon-master-sinnoh',
-    // 'contest-memory-ribbon'
+    'tough-ribbon-master-sinnoh'
 ];
 
 exports.SPAM_CHANNELS = [
